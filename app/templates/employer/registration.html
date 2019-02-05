@@ -1,0 +1,237 @@
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		
+		<script>
+			$(document).ready(function(){
+					$("#filter").load("filter.html");
+					$("#jobs").load("job-listing.html");
+					$("#job-description").load("ad.html");
+					var x = window.matchMedia("(max-width: 700px)")
+					if (x.matches) {
+						$("#").click(function(){
+							$("#job-description").load("job-des.html");
+						});
+					}
+					$("#close").click(function()
+					{
+						$("#popup").remove();
+					}
+				);
+				});
+
+				
+				function load_des()
+				{
+					$("#job-description").load("job-des.html");
+				}
+				function login(){
+					$("#popup-div").load("log.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function close_div()
+				{
+					$("#popup-div").empty();
+					document.getElementById("popup").style.display="none";
+				}
+				function close_des()
+				{
+					$("#job-description").empty();
+					$("#job-description").load("ad.html");
+				}
+				function register(){
+					$("#popup-div").load("reg.html");
+					document.getElementById("popup").style.display="block";
+
+				}
+				function category()
+				{
+					$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function location_12()
+				{
+					$("#popup-div").load("location.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function education()
+				{
+					document.getElementById("job_role").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+		</script>
+		<body>
+			<div id="popup" style="position:fixed; display:none; top:100px; left:350px; width:50%;height:70%; background-color:white; z-index:2;border:1px solid red;border-radius:10px;">
+				<div style="float:right; margin:20px;">
+					<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+				</div>
+				<div id="popup-div">
+				</div>
+			</div>
+			<header>
+				
+				<div class="container-fluid" >
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							<div class="fleft">
+								<h5 style="color:white;color:white;border:none; border-radius:5px; padding:5px;">Partner</h5>
+								
+							</div>
+							<div class="fleft">
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">College</h5>
+								
+							</div>
+							<div class="fleft" >
+								<h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;">Employer</h5>
+								
+							</div>
+							
+								
+						</div>
+						
+						
+						<div class="col-md-12" id="mid-header">
+							<div style="text-align:center;">
+								<img src="img/logo.png" class="logo-img " >
+								<p style="color:red; padding-left:30px;"><u>NWCJOBS</u></p>
+							</div>
+							<!--<div class="search">
+								<div class="fleft" id="job_role">
+									<label for="job role" style="color:#4a4d4e;">Job Role</label>
+									<input type="text" placeholder="Job Role" class="form-control" onclick="category()" style="width:110%;"/>
+								</div>
+								<div class="fleft" id="education">
+									<label for="location" style="color:#4a4d4e;">Education</label>
+									<input type="text" placeholder="Education" class="form-control" onclick="education()" style="width:110%;"/>
+								</div>
+								
+								<div class="fleft" id="location_div"style="display:none;">
+									<label for="location" style="color:#4a4d4e;">Location</label>
+									<input type="text" placeholder="Location" class="form-control" onclick="location_12()" style="width:110%;"/>
+								</div>
+								<br/>
+								<div class="fleft">
+									<input type="submit" class="form-control btn" name="Find Jobs"  style="width:110%; background-color:#fc1e1e; color:white;"/>
+								</div>
+								<br/>
+								<div class="fleft" style="margin-top:15px;">
+									<p><a href="#" style="color:#4a4d4e;"><b>Find Jobs Fast <span style="color:red;">"Create Profile"</span> NOW</b></a></p>
+								</div>
+								<br/>
+								
+							</div>-->
+							<!--<div class="search">
+								<center><h1 style="padding-left:140px; font-family:poppins;">Register</h1></center>
+							</div>
+							<div class="fright" onclick="register()">
+								<h4 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;">Register</h4>
+								
+							</div>
+							<div class="fright" onclick="login()">
+								<h4 style="border:none; border-radius:5px;  padding:5px; color:black;">Login</h4>
+							</div>-->
+							<!--<div class="dropdown" id="profile" style="margin-right:40px;">
+								<h4 style="border-bottom:1px solid red; color:red; padding:5px;">Profile</h4>
+								<div class="dropdown-content">
+									<a href="dashboard.html"><h5 style="cursor:pointer;">Dashboard</h5></a>
+									<a href="profile.html"><h5 style="cursor:pointer;">View Profile</h5></a>
+									<a href="notif.html"><h5 style="cursor:pointer;">Notification</h5></a>
+									<a href="setting.html"><h5 style="cursor:pointer;">Settings</h5></a>
+									<a href="logout.html"><h5 style="cursor:pointer;">Logout</h5></a>
+								</div>
+							</div>-->
+							<div  style="margin-right:20px;">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<section style=" width:50%; margin-left:25%; background-color:#F0F0F0; padding-left:60px; padding-right:60px;" >
+				<div style="padding-top:250px;">
+					<h3><b>Register Yourself with NWCJOBS</b></h3>
+				</div>
+				<form>
+					<div class="form-group">
+						<label for="name"><h5 style="font-family:poppins;">Name:</h5></label>
+						<input type="text" class="form-control" required>
+						
+					</div>
+					<div class="form-group">
+						<label for="name"><h5 style="font-family:poppins;">Mobile No. :</h5></label>
+						<input type="text" class="form-control" name="phone_no" required> 
+						
+					</div>
+					<div class="form-group">
+						<label for="name"><h5 style="font-family:poppins;">Gender :</h5></label>
+						<center>
+						<h3 style="width:100%;"><span style="float:left; border:1px solid red; color:red; padding:5px; border-radius:5px;">Male</span> 
+						<span style=" border:1px solid red; color:red; padding:5px; border-radius:5px;">Female</span> 
+						<span   style="float:right; border:1px solid red; color:red; padding:5px; border-radius:5px;"onclick="select_location(this)">Others</span></h3>
+						</center>
+					</div>
+					<div class="form-group">
+						<label for="name"><h5 style="font-family:poppins;">Preferrd State:</h5></label>
+						<input type="text" class="form-control" name="phone_no" onclick="location_12()" required>
+						
+					</div>
+					<div class="form-group">
+						<label for="name"><h5 style="font-family:poppins;">Qualification:</h5></label>
+						<input type="text" class="form-control" name="phone_no" onclick="location_12()" required>
+						
+					</div>
+					<div class="form-group">
+						<label for="name"><h5 style="font-family:poppins;">Languages Known:</h5></label>
+						<input type="text" class="form-control" name="phone_no" onclick="location_12()" required>
+						
+					</div>
+					<div class="form-group">
+						<input type="submit" class="form-control btn btn-primary" name="submit" >
+						
+					</div>
+					
+				</form>
+			</section>
+			
+<script>
+	function select_location(x, y)
+	{
+		x.style.backgroundColor= 'red';
+		x.style.color= 'white';
+		document.getElementById("location_div").value= 'krii';
+		close_div();
+	}
+</script>

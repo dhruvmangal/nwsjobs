@@ -1,0 +1,240 @@
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		
+		<script>
+			$(document).ready(function(){
+					$("#filter").load("filter-candidate.html");
+					$("#candidate").load("candidate-listing.html");
+					$("#candidate-description").load("ad.html");
+					var x = window.matchMedia("(max-width: 700px)")
+					if (x.matches) {
+						$("#").click(function(){
+							$("#candidate-description").load("candidate-des.html");
+						});
+					}
+					$("#close").click(function()
+					{
+						$("#popup").remove();
+					}
+				);
+				});
+
+			
+				function load_candidate()
+				{
+					$("#candidate-description").load("candidate-des.html");
+				}
+				function login(){
+					$("#popup-div").load("log2.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function close_div()
+				{
+					$("#popup-div").empty();
+					document.getElementById("popup").style.display="none";
+				}
+				function close_des()
+				{
+					$("#candidate-description").empty();
+					$("#candidate-description").load("ad.html");
+				}
+				function register(){
+					$("#popup-div").load("reg2.html");
+					document.getElementById("popup").style.display="block";
+
+				}
+				function category()
+				{
+					$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function location_12()
+				{
+					$("#popup-div").load("location.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function education()
+				{
+					$("#popup-div").load("education.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("job_role").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function select_location(x)
+				{
+					document.getElementById("location_12").value= x;
+				}
+				function skills()
+				{
+					$("#popup-div").load("skills.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function forgot()
+				{
+					$("#popup-div").load("forgot_password.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function get_otp()
+				{
+					$("#popup-div").load("get_otp.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function set_password()
+				{
+					$("#popup-div").load("set_password.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function pass_succ()
+				{
+					$("#popup-div").load("pass_succ.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function reg_otp()
+				{
+					$("#popup-div").load("reg_otp.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function reg_form()
+				{
+					$("#popup-div").load("reg_form.html");
+					document.getElementById("popup").style.display="block";	
+				}				
+		
+		</script>
+		<body>
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+					</div>
+				</div>	
+			</div>
+			<header>
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							
+							<div class="fleft" >
+								<a href="employer.html"><h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;">Employer</h5></a>
+								
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:10px;"><img src="img/whatsapp.png" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+								
+						</div>
+						
+						
+						<div class="col-md-12" id="mid-header">
+							<div class="logo">
+								<img src="img/logo.png" class="logo-img " >
+								<p class="logo-txt"><u>NWCJOBS</u></p>
+							</div>
+							<div class="search">
+								<div class="fleft" id="job_role">
+									<label for="job role" style="color:#4a4d4e;">Job Role</label>
+									<input type="text" id="job_role_ab" placeholder="Job Role" class="form-control" onclick="category()" style="width:110%;" value="All Jobs"/>
+								</div>
+								<div class="fleft" id="education">
+									<label for="location" style="color:#4a4d4e;">Education</label>
+									<input type="text" id="education_ab" placeholder="Education" class="form-control" onclick="education()" style="width:110%;"/>
+								</div>
+								
+								<div class="fleft" id="location_div"style="display:none;">
+									<label for="location" style="color:#4a4d4e;">Location</label>
+									<input type="text" placeholder="Location" id="location_12" class="form-control" onclick="location_12()" style="width:110%;" value="Rajasthan"/>
+								</div>
+								<br/>
+								<div class="fleft">
+									<input type="submit" class="form-control btn" name="Find Jobs"  style="width:110%; background-color:#fc1e1e; color:white;" value="Search Candidates"/>
+								</div>
+								<br/>
+								<div class="fright" style="margin-top:4px;">
+									<h4><a href="#" style="color:red;"><b> <span style="color:#4a4d4e;">Quick Job Post</span> NOW</b></a></h4>
+								</div>
+								<br/>
+								
+							</div>
+							<div class="fright" onclick="register()">
+								<h4 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;">Register</h4>
+								
+							</div>
+							<div class="fright" onclick="login()">
+								<h4 style="border:none; border-radius:5px;  padding:5px; color:black;">Login</h4>
+							</div>
+							<!--<div class="dropdown" id="profile" style="margin-right:40px;">
+								<h4 style="border-bottom:1px solid red; color:red; padding:5px;">Profile</h4>
+								<div class="dropdown-content">
+									<a href="dashboard.html"><h5 style="cursor:pointer;">Dashboard</h5></a>
+									<a href="profile.html"><h5 style="cursor:pointer;">View Profile</h5></a>
+									<a href="notif.html"><h5 style="cursor:pointer;">Notification</h5></a>
+									<a href="setting.html"><h5 style="cursor:pointer;">Settings</h5></a>
+									<a href="logout.html"><h5 style="cursor:pointer;">Logout</h5></a>
+								</div>
+							</div>-->
+							<div  style="margin-right:20px;">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<nav id="filter">
+				
+			</nav>
+			<section id="candidate-listing">
+				
+				<div id="candidate">
+					
+				</div>
+			</section>
+			<section id="candidate-description" style="overflow:scroll;">
+				
+			</section >
+			

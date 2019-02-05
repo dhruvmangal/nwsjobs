@@ -1,0 +1,45 @@
+<div class="job-des" id="job-des">
+	<div class="job-close" style="cursor:pointer;">
+		<h4 onclick="close_des()" >&times;</h4>
+	</div>
+	<div class="job-heading" onclick="load_des()">
+		<h3><b><u>Mechanic</u></b></h3>
+		<p style="float:right; margin-right:20px;"><span><b>Job Id: 123456</b></span><br/><br/><span >Posted on: 1 Nov'18</span></p>
+		<h4 class="job-emp" style="color:red;">NWC Jobs</h4>
+		<h4>Jaipur, Rajasthan</h4>
+	</div>
+	<div class="">
+		<p id="contact_company" style="display:none;"><span class="btn " style="background-color:red; color:white; display:none;">Call</span><span class="btn" style="background-color:red; color:white;">Whatsapp</span></p>
+		<p><span class="btn" style="background-color:red; color:white;" onclick="change()" id="contact_company">Contact Company</span> <span class="btn"  style="background-color:#eaeaea; color:black;" onclick="alert('your job has been saved');"> Save Job</span> <span class="btn" style="background-color:#eaeaea; color:black;" > Share</span></p>
+	</div>
+	<hr/>
+	
+	<p><b><span style="float:left">Education: 10th Pass</span><span style="float:left; margin-left:50px;">Gender: Male</span><span style="float:left; margin-left:50px;">Salary: Rs 5000-10000 </span></b></p>
+	<br/>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p>Skills:</p>
+	<ul>
+		<li>Know Mould / Tool making process </li>
+		<li>Handle Multi-Axis Machines </li>
+		<li>Do 2D programing and set the Machine </li>
+		<li>Mould Spare management, Mould Health Checkup, Outsourcing Mould tracking </li>
+		<li>Knowledge of machines and tools, including their designs, uses, repair, and maintenance</li>
+		
+	</ul>
+	<p>Job Details:</p>
+		<p>Hiring for mechanical engineer (Production ) (Quality )
+Appearing candidates apply
+Timing -Day/ Night Shift 8 hours / Days
+Weekly off - Sunday
+Required---Fresher 2018 
+Skills and Qualifications Can channelize activities for impending problem</p>
+</div>
+<script>
+	function change()
+	{
+		document.getElementById('contact_company').style.display= 'none';
+		document.getElementById('company_contact').style.display='block';
+	}
+</script>

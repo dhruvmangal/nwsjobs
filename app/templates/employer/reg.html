@@ -1,0 +1,227 @@
+<section id="phone" style="padding-top:20px; display:block; margin:0px 20px;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<center><h4 style="color:red; font-family:verdana;margin-bottom:50px; margin-top:-20px;"> ENTER YOUR DETAILS TO REGISTER</h5></center>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<form>
+						<div id="mobile-label" style=";">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Mobile No.</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="mobile" placeholder="Mobile No." autofocus="autofocus" onfocus="inputfocus(this, 'Mobile No', 'mobile-label')" onblur="inputblur(this, 'Mobile No', 'mobile-label')"></center>
+
+						<div id="name-label" style="display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Full Name</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%; margin-top:20px;" name="name" placeholder="Full Name" onfocus="inputfocus(this, 'Full Name', 'name-label')" onblur="inputblur(this, 'Full Name', 'name-label')"></center>
+						<div id="gender-label" style="display:block; margin-top:20px;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Gender</p>
+						</div>
+							<center><input type="button" required class="mobile" style="border:1px solid red; background-color:white; width:40%;padding:5px; margin-top:10px;" name="name" onclick="func3(this)" value="Male"/>
+							<input type="button" required class="mobile" style="border:1px solid red; background-color:white; width:40%; margin-top:20px; padding:5px;" name="name" placeholder="Full Name" onfocus="inputfocus(this, 'Full Name', 'name-label')" onblur="inputblur(this, 'Full Name', 'name-label')" onclick="func3(this)" value="Female"/></center>
+						
+						<div id="password-label" style="margin-top:10px;display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Password</p>
+						</div>
+							<center><input type="password" required class="mobile" style=" text-indent:0px;border:none; border-bottom:1px solid red; width:100%; margin-top:20px;" name="password" placeholder="Password" onfocus="inputfocus(this, '  Password', 'password-label')" onblur="inputblur(this, '  Password', 'password-label')"></center>
+						<div id="age-label" style="margin-top:10px;display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Age</p>
+						</div>
+							<center><input type="number" required class="mobile" style=" text-indent:0px;border:none; border-bottom:1px solid red; width:100%; margin-top:20px;" name="age" placeholder="Age" onfocus="inputfocus(this, 'Job Role', 'jobrole-label')" onblur="inputblur(this, '  Age', 'age-label')"></center>
+						<div id="language-label" style="margin-top:20px;display:block;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Preferred Language</p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white; width:30%; margin-top:20px;" name="lang" value="Hindi">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white; width:30%; margin-top:20px;" name="lang" value="Marathi">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="Telugu">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="Tamil">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="Kannada">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="English"></center>
+							
+							
+						</form>	
+							<center><button type="button" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('phone', 'otp')" >CONTINUE</button></center>
+							<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px;">Existing User? LOG IN</button></center>
+						
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="otp" style="padding-top:20px; display:none; margin:0px 20px;"> 
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<form>
+						<div id="OTP-label">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">OTP</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="otp" placeholder="OTP" maxlength="4" autofocus="autofocus" onfocus="inputfocus(this, 'OTP', 'OTP-label')" onblur="inputblur(this, 'OTP', 'OTP-label')"></center>
+						
+							<center><button type="button" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('otp', 'email')" >CONTINUE</button></center>
+						</form>	
+							
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="email" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+						
+						<div id="experience-label" style="display:block; margin-top:10px;">
+							<p  style="font-size:15px; font-family:poppins; color:black; margin-bottom:0px; display:block;"><b>Experience</b></p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="edu1" onclick="fun3(this)" value="Fresher">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp2" onclick="fun3(this)" value="0-2 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="2-5 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="5-10 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="10-15 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="above 15 years">
+							</center>
+							
+						<div id="education-label" style="display:block; margin-top:10px;">
+							<p  style="font-size:15px; font-family:poppins; color:black; margin-bottom:0px; display:block;"><b>Education</b></p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp1" onclick="fun3(this)" value="Below 10th">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp2" onclick="fun3(this)" value="10th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							</center>
+						
+						<div id="salary-label" style="display:block; margin-top:10px;">
+							<p  style="font-size:15px; font-family:poppins; color:black; margin-bottom:0px; display:block;"><b>Current Salary</b></p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp1" onclick="fun3(this)" value="Rs 5000- 9000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp2" onclick="fun3(this)" value="Rs 9000-15000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 15000-20000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 20000-27000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 27000-35000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 35000-42000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 420000-55000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 55000-70000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="above Rs 70000">
+							</center>
+						
+						
+						</form>	
+							<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('email', 'jobs_1')" >CONTINUE</button></center>	
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="jobs_1" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="jobs-divs">
+						
+						</div>
+						<script>
+						$(document).ready(function(){
+							$("#jobs-divs").load("cat.html");
+					
+						});
+						</script>
+							
+							
+						<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('jobs_1','jobs_2')" >CONTINUE</button></center>		
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="jobs_2" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="jobs-divs3">
+						
+						</div>
+						<script>
+						$(document).ready(function(){
+							$("#jobs-divs3").load("location.html");
+					
+						});
+						</script>
+							
+							
+						<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('jobs_2','jobs_3')" >CONTINUE</button></center>		
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="jobs_3" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="jobs-divs2">
+						
+						</div>
+						<script>
+						$(document).ready(function(){
+							$("#jobs-divs2").load("skills.html");
+					
+						});
+						</script>
+							
+							
+						<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('jobs','blank')" >CONTINUE</button></center>		
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<script>
+			function next(x,y)
+			{
+				document.getElementById(x).style.display= "none";
+				document.getElementById(y).style.display= "block";
+			}
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+				if(x.value != '')
+				{
+					
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+			function func3(x)
+			{
+				x.style.backgroundColor= "gray";
+				x.style.color= "white";
+			}
+		</script>

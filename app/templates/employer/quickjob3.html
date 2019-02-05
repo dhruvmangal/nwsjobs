@@ -1,0 +1,181 @@
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		
+		<script>
+			$(document).ready(function(){
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "jobView.html";
+						}
+					else{
+					$("#job-description").load("job-des.html");
+					}
+				});
+
+			
+				function load_candidate()
+				{
+					$("#candidate-description").load("candidate-des.html");
+				}
+				function login(){
+					$("#popup-div").load("log2.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function close_div()
+				{
+					$("#popup-div").empty();
+					document.getElementById("popup").style.display="none";
+				}
+				function close_des()
+				{
+					$("#candidate-description").empty();
+					$("#candidate-description").load("ad.html");
+				}
+				function register(){
+					$("#popup-div").load("reg2 	.html");
+					document.getElementById("popup").style.display="block";
+
+				}
+				function category()
+				{
+					$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function location_12()
+				{
+					$("#popup-div").load("location.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function education()
+				{
+					$("#popup-div").load("education.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("job_role").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function select_location(x)
+				{
+					document.getElementById("location_12").value= x;
+				}
+				function skills()
+				{
+					$("#popup-div").load("skills.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function qjp()
+				{
+					$("#popup-div").load("quickjob.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function get_otp()
+				{
+					$("#popup-div").load("get_otp.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function load_des()
+				{
+					
+				}
+		
+		</script>
+		<body style="background-color:#fafafa;">
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+					</div>
+				</div>	
+			</div>
+			<header>
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							
+							<div class="fleft" >
+								<h6 style="margin-top:-3px; color:white;">Looking for a job</h6>
+								<h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;text-align:center;">Click Here</h5>
+								
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:10px;"><img src="img/whatsapp.png" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+								
+						</div>
+						
+						
+						
+					</div>
+				</div>
+			</header>
+			<section style="padding-top:100px;">
+				<div class="container" style="background-color:white;">
+					<div class="row">
+						
+						<div class="col-md-12">
+							<h2>Preview</h2>
+							<hr/>
+						</div>
+					</div>
+					<div class="row">	
+						<div class="col-md-10">
+							<button style="background-color:white; color:gray; border:none; margin-left:100px; font-size:20px;"><u>Edit</u></button>
+							<a href="#"><button class="btn" style="font-size:20px; background:red;color:white;margin-top:10px;float:right;">Post My Job</button></a>
+						</div>
+						<div class="col-md-2">
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-1">
+						</div>
+						<div class="col-md-10" id="job-description" style="">
+						</div>
+						<div class="col-md-1">
+						</div>
+					</div>	
+				</div>
+				
+			</section>

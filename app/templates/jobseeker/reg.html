@@ -1,0 +1,54 @@
+<section id="div-form" style=" margin-right:20px; ">
+				
+			<div class="container-fluid" style="">
+				
+				<div class="row">
+					<div class="col-md-4" style="background-color:#4A4D4E; height:500px; margin-bottom:-200px;">
+							<center><h2 style="color:white; font-family:poppins; margin-top:200px;">USER REGISTER</h2></center>
+					</div>
+					<div class="col-md-8 col-xs-12" style="padding:10px 50px;">
+						<form>
+						<div style="height:30px; width:100%;">	
+							<div id="mobile-label">
+								<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Enter Your Mobile Number</p>
+							</div>		
+						</div>
+						
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%" name="mobile" placeholder="Enter Your Mobile Number" autofocus="autofocus" onfocus="inputfocus(this, 'Enter Your Mobile Number', 'mobile-label')" onblur="inputblur(this, 'Enter Your Mobile Number', 'mobile-label')"></center>
+							
+							
+							
+						</form>
+							<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="login" value="" onclick="reg_otp()">GET OTP</button></center>
+							<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px; box-shadow: 1px 1px 3px gray;" onclick="login()">Already have an Account? Login</button></center>
+							
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<script>
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+		</script>

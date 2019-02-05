@@ -1,0 +1,91 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			@media screen and (max-width: 900px) {
+				#logo{
+					text-align:center;
+				}
+			}
+		</style>
+	</head>
+	<body style="background-color:#F1F3F6;">
+		<header style="width:100%; margin-bottom:100px;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12" id="logo">
+						<img src="{% static 'img/logo.png'%}" style="width:80px; height:auto;margin:10px;"/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section style="padding-top:150px;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4" style="border:1px solid #fafafa; background-color:white;">
+						<div style="width:100%; padding:10px; background-color:#4A4D4E;color:white;">
+							<center><h4>College Login</h4></center>
+						</div>
+						<form method="POST" action="../regForm/">
+							{% csrf_token %}
+						<div style="width:100%; padding:10px; ">
+							<label for="mobile_no">Company Name.</label>
+							<center><input type="text" class="form-control" name="company_name"/></center>
+						</div>
+						<div style="width:100%; padding:10px; ">
+							<label for="password">ContactPerson</label>
+							<center><input type="text" class="form-control" name="contact_person"/></center>
+                        </div>
+                        <div style="width:100%; padding:10px; ">
+                                <label for="password">Email</label>
+                                <center><input type="text" class="form-control" name="company_email"/></center>
+                            </div>
+                            <div style="width:100%; padding:10px; ">
+                                    <label for="password">Company Address</label>
+                                    <center><input type="text" class="form-control" name="company_address"/></center>
+								</div> 
+								<div style="width:100%; padding:10px; ">
+										<label for="password">Choose Password</label>
+										<center><input type="text" class="form-control" name="company_password"/></center>
+									</div> 	
+								<div style="width:100%; padding:10px; ">
+										<center><input type="submit" name="signup" class="form-control btn" style="background-color:red; color:white;" value="Signup"/></center>
+									</div>	   
+						<div style="width:100%; padding:10px; ">
+						</div>
+						</form>
+					</div>
+					<div class="col-md-4">
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>	
+
+</html>

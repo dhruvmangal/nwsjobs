@@ -1,0 +1,10 @@
+<form action="/your-name/" method="post">
+    
+    <input type="submit" value="Submit" />
+    {% if user%}
+    {% for u in user%}
+        {{u.jobseeker_phone}}
+        {{u.jobseeker_password}}
+    {% endfor%}
+    {% endif%}
+</form>

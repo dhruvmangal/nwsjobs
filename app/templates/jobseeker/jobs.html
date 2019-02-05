@@ -1,0 +1,960 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			#job-method{
+				padding-top:50px;
+				width:100px;
+				height:auto;
+				z-index:1;
+			}
+			#function-sec{
+				padding-top:80px;
+				position:fixed;
+				top:0px;	
+				width:100%;
+				background-color:white;
+				z-index:1;
+			}
+			
+			.main-logo{
+			width:100px;
+			height:auto;}
+			
+			.no-display-desktop{
+					display:none;
+				}
+				
+			#job-function-mob{
+				display:none;
+			}
+			
+			#filter-line{
+				display:none;
+				}	
+				
+			.select_btn{
+				cursor:pointer;
+				background-color:white;
+				color:#4A4D4E;
+				padding:10px;
+				border:1px solid gray;
+				border-radius:5px;
+				
+			}	
+			.job_cat{
+				float:left;
+				border:1px solid gray;
+				padding:10px 5px;
+				border-radius:10px;
+				margin:3px;
+				width:150px;
+				height:120px;
+			}
+			@media screen and (max-width: 900px) {
+				#header{
+					display:none;
+				}	
+				#job-method{
+					padding-top:0px;
+					position:fixed;
+					width:100%;
+					z-index:1;
+				}
+				#function-sec{padding-top:10px;}
+				#filter{
+					display:none;
+				}
+				#job-description{
+					display:none;
+				}
+				#job-function{
+					display:none;
+				}
+				#job-function-mob{
+				display:block;
+				}
+				.no-display-desktop{
+					display:block;
+					margin-top:50px;
+				}
+				.main-logo{
+					width:70px;
+					height:auto;
+					padding-bottom:10px;
+					}
+					#filter-line{
+						display:block;
+					}
+				#ad{
+					display:none;
+				}	
+				#filter{
+					display: none;	
+				}
+				#descripton{
+					display: none;
+				}
+	
+			}
+			
+
+		</style>
+		<script>
+				var states= ['Andhra Pradesh',
+				'Arunachal Pradesh',
+				'Assam',
+				'Bihar',
+				'Chhattisgarh',
+				'Goa',
+				'Gujarat',
+				'Haryana',
+				'Himachal Pradesh',
+				'Jammu and Kashmir',
+				'Jharkhand',
+				'Karnataka',
+				'Kerala',
+				'Madhya Pradesh',
+				'Maharashtra',
+				'Manipur',
+				'Meghalaya',
+				'Mizoram',
+				'Nagaland',
+				'Odisha',
+				'Punjab',
+				'Rajasthan',
+				'Sikkim',
+				'	Tamil Nadu',
+				'Telangana',
+				'Tripura',
+				'Uttar Pradesh',
+				'Uttarakhand',
+				'	West Bengal',
+				'Andaman and Nicobar Islands',
+				'	Chandigarh',
+				'Dadra and Nagar Haveli',
+				'Daman and Diu',
+				'Delhi',
+				'Lakshadweep',
+				'Pondicherry']
+			</script>
+		<script>
+			$(document).ready(function(){
+
+					var x = window.matchMedia("(max-width: 700px)")
+					if (x.matches) {
+						$("#").click(function(){
+							$("#job-description").load("job-des.html");
+						});
+					}
+					$("#close").click(function()
+					{
+						$("#popup").remove();
+					}
+				);
+				});
+					
+				
+				function show_job_func(){
+					document.getElementById('job-function-mob').style.display= "block";
+					document.getElementById('job-functon-btn1').style.display= "none";
+					document.getElementById('job-functon-btn2').style.display= "block";
+				}
+				function hide_job_func(){
+					document.getElementById('job-function-mob').style.display= "none";
+					document.getElementById('job-functon-btn1').style.display= "block";
+					document.getElementById('job-functon-btn2').style.display= "none";
+				}
+				function load_des(y,t, title, employer_name, date, location, state, desc, salary, edu, gender)
+				{
+					var job= new Object();
+					job.id= t;
+					job.title= title;
+					job.employer_name= employer_name;
+					job.date= date;
+					job.location= location;
+					job.state= state;
+					job.desc= desc;
+					job.salary= salary;
+					job.edu= edu;
+					job.gender= gender;
+					var x=  window.matchMedia("(max-width: 700px)")
+					y.style.backgroundColor= '#F8F8F8';
+					if(x.matches)
+					{
+						window.location.href = "../"+t+"/";
+					}
+					else{
+						document.getElementById('description_title').innerHTML= "<b>"+job.title+"</b>";
+						document.getElementById('description_employer').innerHTML= job.employer_name;
+						document.getElementById('description_date').innerHTML= job.date;
+						document.getElementById('description_location').innerHTML= job.location;
+						document.getElementById('description_state').innerHTML= job.state;
+						document.getElementById('description_id').innerHTML= job.id;
+						document.getElementById('description_des').innerHTML= job.desc;
+						document.getElementById('description_salary').innerHTML= "₹  "+job.salary;
+						document.getElementById('description_edu').innerHTML= job.edu;
+						document.getElementById('description_gender').innerHTML= job.gender;
+						
+						 
+						document.getElementById('description').style.display='block';
+					}	
+					
+				}
+				function filter()
+				{
+					window.location.href = "../filter/";
+				}
+				function login(){
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "../login/";
+						}
+					else{
+						document.getElementById("popup").style.display="block";
+					}
+					
+				}
+				function close_div()
+				{
+					document.getElementById("reg").style.display="none";
+					document.getElementById("popup").style.display="none";
+					document.getElementById("category").style.display="none";
+					document.getElementById("location").style.display="none";
+				}
+				function close_des()
+				{
+					$("#job-description").empty();
+					$("#job-description").load("ad.html");
+				}
+				function register(){
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "../signup/";
+						}
+					else{
+						
+					document.getElementById("reg").style.display="block";
+					}
+					
+
+				}
+				function category()
+				{
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "../category/";
+						}
+					else{
+						
+					document.getElementById("category").style.display="block";
+					}
+					
+				}
+				function location_12()
+				{
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "../location/";
+						}
+					else{
+						
+					document.getElementById("location").style.display="block";
+					}
+				}
+				function education()
+				{
+					
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "education.html";
+						}
+					else{
+						$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+					}
+				}
+				function select_location(x)
+				{
+					document.getElementById("location_12").value= x;
+				}
+				function skills()
+				{
+					$("#popup-div").load("skills.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function clear_screen()
+				{
+					document.getElementById("popups").style.display="none";
+					document.getElementById("body").style.position="static";
+					category();
+				}
+					
+		
+		</script>
+		<body>
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+							<section id="div-form" style=" margin-right:20px; ">
+				
+									<div class="container-fluid" style="">
+										
+										<div class="row">
+											<div class="col-md-4" style="background-color:#4A4D4E; height:500px; margin-bottom:-200px;">
+													<center><h2 style="color:white; font-family:poppins; margin-top:200px;">USER LOGIN</h2></center>
+											</div>
+											<div class="col-md-8 col-xs-12" style="padding:10px 50px;">
+												<form method="post" action="../loginForm/">
+													{% csrf_token%}
+												<div style="height:30px; width:100%;">	
+													<div id="mobile-label">
+														<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Email/Mobile</p>
+													</div>		
+												</div>
+												
+													<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%" name="phone" placeholder="Email/Mobile No." autofocus="autofocus" onfocus="inputfocus(this, 'Email/Mobile No', 'mobile-label')" onblur="inputblur(this, 'Email/Mobile No', 'mobile-label')"></center>
+													
+												<div id="password-label" style="float:left;display:none;">
+													<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">Password</p>
+												</div>
+												<div id="forgot" style="float:right; cursor:pointer;" onclick="show_forget()">
+													<p  style="font-size:12px; font-family:poppins; color:#3b5998; margin-bottom:0px; margin-top:10px; display:block;" onclick="forgot()">Forgot?</p>
+												</div>
+												
+													<center><input type="Password" name="password" required class="mobile" style=" text-indent:18px;border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="Password." onfocus="inputfocus(this, 'Password', 'password-label')" onblur="inputblur(this, 'Password', 'password-label')"></center>
+													
+													<center><input type="submit" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="login" value="LOG IN"></center>
+												</form>
+													<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px; box-shadow: 1px 1px 3px gray;" onclick="register()">New to NWC Jobs? Register</button></center>
+												
+											</div>
+											
+										</div>
+									</div>
+								</section>
+								<script>
+									function inputfocus(x, y, z)
+									{
+										x.placeholder=" ";
+										document.getElementById(z).style.display= "block";
+									}
+									function inputblur(x,y,z)
+									{
+										x.placeholder=y;
+										document.getElementById(z).style.display="none";
+										if(x.value != '')
+										{
+											document.getElementById(z).style.display="block";
+										}
+									}
+									function show_forget()
+									{
+										var x= document.getElementByClass('mobile');
+										if(x.value != '')
+										{
+											document.getElementById('forget-label').style.display="block";
+											document.getElementById('mobile-label').style.display="none";
+										}
+									}
+								</script>
+					</div>
+				</div>	
+			</div>
+			<div id="reg" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+					<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+						<div style="float:right; margin:20px;">
+							<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+						</div>
+						<div id="popup-div">
+								<section id="div-form" style=" margin-right:20px; ">
+				
+										<div class="container-fluid" style="">
+											
+											<div class="row">
+												<div class="col-md-4" style="background-color:#4A4D4E; height:500px; margin-bottom:-200px;">
+														<center><h2 style="color:white; font-family:poppins; margin-top:200px;">USER REGISTER</h2></center>
+												</div>
+												<div class="col-md-8 col-xs-12" style="padding:10px 50px;">
+													<form>
+													<div style="height:30px; width:100%;">	
+														<div id="mobile-label">
+															<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Enter Your Mobile Number</p>
+														</div>		
+													</div>
+													
+														<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%" name="mobile" placeholder="Enter Your Mobile Number" autofocus="autofocus" onfocus="inputfocus(this, 'Enter Your Mobile Number', 'mobile-label')" onblur="inputblur(this, 'Enter Your Mobile Number', 'mobile-label')"></center>
+														
+														
+														
+													</form>
+														<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="login" value="" onclick="reg_otp()">GET OTP</button></center>
+														<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px; box-shadow: 1px 1px 3px gray;" onclick="login()">Already have an Account? Login</button></center>
+														
+												</div>
+												
+											</div>
+										</div>
+									</section>
+									<script>
+										function inputfocus(x, y, z)
+										{
+											x.placeholder=" ";
+											document.getElementById(z).style.display= "block";
+										}
+										function inputblur(x,y,z)
+										{
+											x.placeholder=y;
+											document.getElementById(z).style.display="none";
+											if(x.value != '')
+											{
+												document.getElementById(z).style.display="block";
+											}
+										}
+										function show_forget()
+										{
+											var x= document.getElementByClass('mobile');
+											if(x.value != '')
+											{
+												document.getElementById('forget-label').style.display="block";
+												document.getElementById('mobile-label').style.display="none";
+											}
+										}
+									</script>
+						</div>
+					</div>	
+				</div>
+
+
+				<div id="category" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+						<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+							<div style="float:right; margin:20px;">
+								<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+							</div>
+							<div id="popup-div">
+									<section style="padding-top:10px;">
+											<div class="container-fluid">
+												<div class="col-md-12" id="category">
+														<script>
+																function select_job_role(x)
+																{
+																	window.location.href= "../jobs/?job_category="+x					
+																}
+																$(document).ready(function ()
+																	{
+																		var query = window.location.search.substring(1);
+																   }
+																  )
+															</script>
+															<div id="category" style=" background-color:white; margin:0px -15px;">
+																<div class="containe">
+																	<div class="row">
+																		<div class="col-md-12">
+																			<center><h3>Select Job Role</h3></center>
+																		</div>
+																	</div>
+																
+																	<div class="row">
+																		<div class="col-md-12 col-xs-12"  style="text-align:center;">
+																			{% if category%}
+																			{% for cat in category%}
+																			<div class="job_cat" onclick="select_job_role('{{cat.job_category}}')">
+																				<div style="height:30px;">		
+																					<p style="color:black; padding-top:10px;">{{cat.job_category}}</p>
+																				</div>
+																				<hr/>
+																				<div style="height:45%;">
+																					<p>इलेक्ट्रीशियन </p>			
+																				</div>	
+																			</div>
+																			{% endfor %}
+																			{% endif %}
+																			
+															
+																		</div>
+																	</div>
+																</div>
+															
+															</div>
+												</div>
+											</div>
+										</section>
+							</div>
+						</div>	
+					</div>
+
+
+
+					<div id="location" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:900px; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+							<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+								
+								<div id="popup-div" style="height:500px; padding-bottom:0px; overflow-y:scroll">
+										<div style="float:right; margin:20px;">
+												<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+											</div>
+										<div class="container-fluid" style="background-color:white;">
+												<center><h4 style="color:#4a4d4e;">Choose Your Location</h4></center>
+												<script>
+													var i;
+													for( i=0; i<states.length; i++)
+													{
+														var col_start= "<div class='col-md-4 col-xs-4'>";
+														var col_end= "</div>"
+														var row_start= "<div class='row'>";
+													
+														var text='<a href="../jobs/?location='+ states[i]+'"><h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;" >'+states[i]+"</h5></a>";
+														var text= col_start+text+col_end;
+														if(i%3==0)
+														{
+															var text= row_start+text;
+														}
+														if(i%3 ==2)
+														{
+															var text= text+col_end;
+														}
+														document.write(text);
+														$(states[i]).click(function(){
+															select_location(state[i]);
+														});
+													}
+													
+													function select_location(x)
+														{
+															alert(x)
+														}
+												</script>
+												</div>
+								</div>
+							</div>	
+						</div>
+
+					
+			<header style="z-index:2;" id="header">
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							<div class="fleft">
+								<h5 style="color:white;color:white;border:none; border-radius:5px; padding:5px;">Mitra</h5>
+								
+							</div>
+							<div class="fleft">
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">College</h5>
+								
+							</div>
+							<div class="fleft" >
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">Partner</h5>
+								
+								
+							</div>
+							
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:10px;"><img src="{% static 'img/whatsapp.png' %}" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+							<div class="fright">
+								<a href="../candidates/"><h5 style="border:none; border-radius:5px; background-color:red; padding:10px; color:white;" class="nonne">Firm / Business</h5></a>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<section id="function-sec">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-2">
+							<center><img src="{% static 'img/logo.png'%}" class="main-logo" style=""  ></center>
+						</div>
+						<div class="col-md-8 col-xs-12" id="job-function">
+							
+							<form>
+								<div style="float:left; margin-left:10px; width:30%;">
+									
+									<label for="jobrole">JOB ROLE</label>
+									<br/>
+									
+									<input type="text" placeholder=" {{job_category}}" style="width:100%; border-radius:5%; border:2px solid gray; height:30px; color:black"onclick="category()"
+								value="	
+										{{job_category}}
+								
+										"
+									/>
+									
+								</div>
+								<div style="float:left; margin-left:10px; width:30%; display:none;">
+									<label for="education">Education</label>
+									<br/>
+									<input type="text" placeholder=" Education" disabled style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+									
+								</div>
+								<div style="float:left; margin-left:10px; width:30%;">
+									<label for="education">LOCATION</label>
+									<br/>
+									<input type="text" placeholder=" Location" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;" onclick="location_12()"/>
+								</div>
+								<div style="padding-top:10px;">
+									<button class="btn" style="margin:15px; background-color:#FF0000; color:white;" ><b>Search Job</b></button>
+									
+								</div>
+							</form>
+							
+						</div>
+					{% if request.session.phone%}
+					<div class="col-md-2 col-xs-12" >
+							<div style="text-align:center; padding-top:5px;">
+								<a href="../profile/"><button class="btn" style="color:white; background-color:red;"><b>Profile</b></button></a>
+							</div>
+							
+						</div>
+						{%else%}
+						<div class="col-md-2 col-xs-12" >
+								<div style="text-align:center; padding-top:5px;">
+									<button class="btn" style="background-color:white; color:#4A4D4E;border:1px solid gray;" onclick="login()"><b>Login</b></button>
+									<button class="btn" style="color:white; background-color:red;" onclick="register()"><b>signup</b></button>
+								</div>
+								
+							</div>
+					{% endif %}
+						
+						<div class="no-display-desktop">
+								<center><p id="job-functon-btn1"  style="display:none;" onclick="show_job_func()">Click here to search Jobs <i class="fas fa-angle-double-down"></i>	</p></center>
+								<center><p id="job-functon-btn2" onclick="hide_job_func()">Click here to minimize <i class="fas fa-angle-double-up"></i>	</p></center>
+							<hr/>
+						</div>
+						<div id="job-function-mob" class="container">
+							<form>	
+							<div class="row">
+								<center><p><b>Search Suitable Job for You</b></p></center>
+								<div style=" margin-top:10x">
+									<label for="jobrole" style="margin-left:30px;">JOB ROLE</label>
+									<br/>
+									<center><input type="text" style="width:80%; border-radius:5%; border:2px solid gray; height:30px; margin-left-right:10px; margin-bottom:10px;" onclick="category()"/></center>
+								</div>
+								<div style=" margin-top:10x; display:none;">
+									<label for="jobrole" style="margin-left:30px;">Education</label>
+									<br/>
+									<center><input type="text" style="width:80%; border-radius:5%; border:2px solid gray; height:30px; margin-left-right:10px; margin-bottom:10px;" onclick="education()"/></center>
+								</div>
+								<div style=" margin-top:10x">
+									<label for="jobrole" style="margin-left:30px;">Location</label>
+									<br/>
+									<center><input type="text" style="width:80%; border-radius:5%; border:2px solid gray; height:30px; margin-left-right:10px; margin-bottom:10px;" onclick="location_12()"/></center>
+								</div>
+								<div style=" margin-top:10x">
+									<center><button class="btn" style="margin:15px; background-color:#FF0000; color:white; width:80%;" ><b>Search Job</b></button></center>
+								</div>
+								
+							</div>
+							</form>
+							<hr/>
+						</div>
+							
+					</div>
+					
+				</div>
+			</section>
+			<section >
+				
+			</section>
+			<section style="padding-top:200px;">
+				<div class="row" id="filter-line">
+					<div style="width:100%;">
+					<div style="float:left">
+						<button class="btn" style="background-color:white; " onclick="filter()"> <i class="fas fa-filter"></i> Filters </button>
+					</div>
+					
+				</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-xs-0">
+						<div id="filter" style="width:100%; padding-top:20px;">
+							<div id="filter-div">
+								<div>
+								<center><h4 class="" style="color:black;"><b>Search Job by</b></h4></center>
+								<hr/>
+							</div>
+							<form>
+							<div class="filter-category">
+								
+									<center>
+									
+									<input type="text"  id="job_role_ab" placeholder="job_role" class="form-control" onclick="category()" style="width:100%;" job_role= />
+								</center>
+							</div>
+							<hr/>
+							
+							
+							<div class="filter-category">
+								<center>
+									<input type="text" placeholder="Location" class="form-control"  onclick="location_12()" style="width:100%;"/>
+								</center>
+							</div>
+							<hr/>
+							<div class="filter-category">
+								<center>
+									<input type="text" placeholder="Education" class="form-control" onclick="category()" style="width:100%;"/>
+								</center>
+							</div>
+							<hr/>
+							<div class="filter-category">
+								<h4>Salary</h4>
+								<div class="filter-radio">
+									<input type="hidden" name="salary_range" id="salary_range" value="none"/>
+									<h5 class="select_btn" onclick="salary_select(this, 'range1')" id="range1"> ₹5000 to ₹9000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range2')" id="range2"> ₹9000 to ₹15000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range3')" id="range3"> ₹15000 to ₹20000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range4')" id="range4"> ₹20000 to ₹27000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range5')" id="range5"> ₹27000 to ₹35000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range6')" id="range6"> ₹35000 to ₹42000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range7')" id="range7"> ₹42000 to ₹55000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range8')" id="range8"> ₹55000 to ₹70000</h5>
+									<h5 class="select_btn" onclick="salary_select(this, 'range9')" id="range9"> Above ₹70000</h5>
+							
+								</div>
+							</div>
+							<hr/>
+							<div class="filter-category">
+								<h4>Experience</h4>
+								<div class="filter-radio">
+									<input type="hidden" name="exp" value="none" id="exp"/>
+									<h5 class="select_btn" onclick="select_exp(this, 'exp1')" id="exp1"> Fresher</h5>
+									<h5 class="select_btn" onclick="select_exp(this, 'exp2')" id="exp2"> 0-2 Years</h5>
+									<h5 class="select_btn" onclick="select_exp(this, 'exp3')" id="exp3"> 2-5 Years</h5>
+									<h5 class="select_btn" onclick="select_exp(this, 'exp4')" id="exp4"> 5-10 Years</h5>
+									<h5 class="select_btn" onclick="select_exp(this, 'exp5')" id="exp5"> 10-15 Years</h5>
+									<h5 class="select_btn" onclick="select_exp(this, 'exp6')" id="exp6"> 15 Years & above</h5>
+								</div>
+							</div>
+							<hr/>
+							<div class="filter-category">
+								<center><button class="btn" style="background-color:red; color:white;"> Apply Filters</button></center>
+							</div>
+							<hr/>
+							<div class="filter-category">
+								<center><p style="color:#4a4d4e;"><u><b>Advance  Filters</b></u></p></center>
+							</div>
+							
+							<!--<div class="filter-category">
+								<p class="fil">&times; clear</p>
+							</div>-->	
+							
+							
+							</form>
+							</div>
+							
+							<script>
+								function salary_select(v, val)
+								{
+									var x= document.getElementById('salary_range').value;
+									v.style.backgroundColor= 'red';
+									v.style.color= 'white';
+									if(x== 'none')
+									{
+									document.getElementById('salary_range').value=val;
+									x=document.getElementById('salary_range').value;
+									
+									
+									}
+									else{
+										document.getElementById(x).style.backgroundColor="white";
+										document.getElementById(x).style.color= "#4A4D4E";
+										document.getElementById('salary_range').value=val;
+										
+									}
+								}
+								function select_exp(v, val)
+								{
+									var x= document.getElementById('exp').value;
+									v.style.backgroundColor= 'red';
+									v.style.color= 'white';
+									if(x== 'none')
+									{
+									document.getElementById('exp').value=val;
+									x=document.getElementById('exp').value;
+									
+									
+									}
+									else{
+										document.getElementById(x).style.backgroundColor="white";
+										document.getElementById(x).style.color= "#4A4D4E";
+										document.getElementById('exp').value=val;
+										
+									}
+								}
+							</script>
+						</div>
+					</div>
+				
+					<div class="col-md-4 col-xs-12" style="margin-left-right:10px; margin-top:20px;border:1px solid #DBDBDB; border-radius:5px;">
+						<div class="job-listing">
+								<div class="heading">
+									<center><h4 class="fil" style="color:black;font-family:verdana;">Search Results for <u>
+										{% if job_category %}
+										{{job_category}}
+										{% else %}
+										'ALL'
+										{% endif %}
+										
+									</u></h4></center>
+									<hr/>
+									
+								</div>
+								<div id="jobs" style="padding:0px 15px;">
+									<div>
+										{% if latest_jobs %}
+										{% for job in latest_jobs %}
+										<div class="job-heading" onclick="load_des(this,{{job.pk}},'{{job.job_title}}','{{job.employer_name}}','{{job.job_date}}','{{job.job_location_city}}','{{job.job_location_state}}','{{job.job_description}}','{{job.job_salary}}','{{job.job_education}}', '{{job.job_gender}}' )">
+											<h4 style="color:#454546"><b>{{job.job_title}}</b></h4>
+											
+											<h5 style="color:#454546"> {{job.employer_name}}</h5>
+											<p  style="color:#454546"><i class="fas fa-calendar-alt"></i> 2-5 Years <span style="color:#454546; float:right;"><i class="fas fa-map-marker-alt"></i>{{job.job_location_city}}, {{job.job_location_state}}</span></p>
+											<p class="search-text"><b>Salary: ‎₹ {{job.job_salary}} a month</b></p>
+										</div>
+										<hr/>
+										
+										{% endfor %}
+										{% endif %}
+										
+										
+									</div>
+								</div>
+							</div>
+						
+					</div>
+					<script>
+						
+					</script>
+					<div class="col-md-5 col-xs-0">
+						<div id="ad">
+							<center><i class="fas fa-user-circle" id="ad-icon" style="color:#4a4d4e;"></i><h4 class="ad-text">Get Your Dream Job</h4></center>
+							<h6 class="ad-text">Thousands of employers search for candidates on NWCJOBS</h6>
+							<center><button class="btn " style="background-color:red; color:white; border-radius:5px;" onclick="register()">Register for Free</button></center>	
+						</div>
+
+					</div>
+				</div>
+				
+			</section>
+			<div id="ad" style="display:none;">
+				<center><i class="fas fa-user-circle" id="ad-icon" style="color:#4a4d4e;"></i><h4 class="ad-text">Get Your Dream Job</h4></center>
+				<center><h6 class="ad-text" style="text-align:jstify;">Thousands of employers search for candidates on NWCJOBS</h6></center>
+				<center><button class="btn " style="background-color:red; color:white; border-radius:5px;" onclick="register()">Register for Free</button></center>	
+			</div>
+			<div id="description" style="display:none;background-color:#F8F8F8; z-index:1; position:fixed;right:0px; width:550px; height:500px; top:180px;overflow:scroll;padding-bottom:100px; ">
+				<div style="float:right; margin:10px 50px; cursor: pointer; " onclick="close_description()">
+					<p>X</p>
+				</div>
+				
+				<div class="container-fluid" style="margin-top:-50px;">
+								<div class="row">
+									<div class="col-md-12">
+										<h3 id="description_title"><b></b></h3>
+										<h4 id="description_employer"><u>Installation Pvt Ltd</u></h4>
+										<h6 style="float:left; padding-left:10px; font-family:verdana;"> Job Posted On: <span id="description_date"></span></h6>
+										<h6 style="float:right; padding-right:10px;"> <i class="fas fa-map-marker-alt"></i> <span id="description_location"></span>, <span id="description_state"></span></span></h6>
+									</div>
+									<div class="col-md-12">
+										<button class="btn" style="background-color:red; color:white; font-size:16px;"> Contact Company </button>
+										<button class="btn" style=" font-size:16px;">Share Job</button>
+									</div>
+								</div>
+								<hr/>
+								<div class="row">
+									<div class="col-xs-12">
+									<h4>Job Id: <span style="color:gray;" id="description_id"> NWC2013456</span></h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+									<h4>Job Description: </h4>
+									<h5 style="margin:0px 20px; text-align:justify; color:gray;" id="description_des">Installation Pvt. Ltd. is Hiring "ITI Electrician" for Maintenance Department 
+									timing includes: 10AM to 5PM from Monday to Saturday. Sunday Off. </h5>	
+									</div>
+								</div> 
+								<div class="row">
+									<div class="col-xs-12">
+										<h4 style="padding-top:10px;">Salary: <span style="color:gray;" id="description_salary">‎₹ 9000- ₹ 15000/-</span></h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<h4>Education: <span style="color:gray;" id="description_edu">12th Pass</span></h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<h4>Gender Preferred: <span style="color:gray;" id="description_gender">Male & Female Both</span></h4>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xs-12">
+										<h4>Skills Required: </h4>	
+									</div>
+									<div class="col-xs-12" id="skills">
+									</div>
+								</div>
+							</div>
+						
+						
+					<script>
+						
+								
+					
+				function change()
+				{
+					document.getElementById('contact_company').style.display= 'none';
+					document.getElementById('company_contact').style.display='block';
+				}
+			</script>					
+			</div>	
+			
+		</body>
+</html>	
+
+<script>
+	function close_description()
+	{
+		document.getElementById('description').style.display= 'none';	
+	}
+</script>

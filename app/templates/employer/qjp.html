@@ -1,0 +1,516 @@
+<section id="phone" style="padding-top:20px; display:block; margin:0px 20px;">
+			<script>
+			var electrician_skills = ['Installing Basic home appliances ',
+			'Knowlede of Mechanical', 
+			'Electrial and hydrolic circuits',
+			'Constructs, operates, maintains and repairs overhead underground power distribution system  ',
+			'Schamatic Diagram interpretation',
+			'blue proint reading',
+			'Carry out wiring process',
+			'install feeder pipe in panel',
+			'RIG electrician'];
+			
+			var itiTrade= ['plumber',
+			'Forger & Heat Treat',
+			' Turner',
+			 'Welder'];
+			 var injectionModuling= ['Injection Module Design', 
+			 'Regulate molding temperature, volume, pressure, and time',
+			 'Sets machine controls, regulating molding temperature, volume of plastic, molding pressure and time, according to knowledge of plastics and molding procedures.', 
+			 'Operate compression or injection molding machines',
+			 'Troubleshoot and adjust molding parameters to maintain quality and maximum product output',
+			 'Develop and document manufacturing instructions and data sheets',
+			 'Mold and cast metal or thermoplastic parts',
+			 'Operate metal and plastic molding and casting machines'
+			 ];
+			 var qcontrol= [
+			 'Garment',
+			 'Pharmaceutical',
+			 'Energy/Power',
+			 'Gems & Jewellery',
+			 'Construction/Engineering',
+			 'Automobile/Auto Ancillary',
+			 'Industrial Product'
+			 ];
+			 var officeboy= [
+			 'Cleaning and maintenance',
+			 'Pantry Work',
+			 'Field Work',
+			 'Filing Document ',
+			 'Handle Bank Related Clerical Work',
+			 'Office work'
+			 ];
+			  var dataEntry=[
+			 'Fast & Accurate Typing',
+			 'MIS Reports',
+			 'Office Administration',
+			 'Computer Accounting with Tally',
+			 'Data Entry Work',
+			 'Proficient in using the internet and email',
+			 'Letter Drafting',
+			 'Prepare, manage and file documents',
+			 ];
+			 var technician= [
+			 'GPS Tracking and Biometric System ',
+			 'Operate Diesel Generator',
+			 'Repair of Computers/ Laptop',
+			 'Chilling Plant',
+			 'Air Compressor',
+			 'Repair Air Conditioner',
+			 'Repair TV',
+			 'Repair Refrigerator',
+			 'Repair Washing Machine',
+			 'Repair and Maintenance of Inverter and UPS',
+			 'Repair Cooler',
+			 'Repair Mobile/ Tablet',
+			 'Consumer Energy Meter Technician',
+			 'Repair Water Purifier',
+			 'CCTV',
+			 'OT',
+			 'Elevator/ Lift',
+			 'DTH-Set Top Installer & Service Technician',
+			 'Solar Panel Installation Technician',
+			 'Fruits and Vegetables Drying/ Dehydration',
+			 'Repair/Maintenance-Office Electronics',
+			 'Repair Microwave Oven',
+			 'Repair-Electric kettle,Iron,Mixer',
+			 'Mobile Phone Tower',
+			 'Diesel Generator Services',
+			 'Maintenance of industrial machines',
+			 'Installing an HVAC system',
+			 'Installation of various transducer, sensor',
+			 'Music System',
+			 'Medical Equipment Repair',
+			 'Correction and repair of broadband service',
+			 'Consumer energy meter technician'
+			 ];
+			 var formanSupervisor= [
+			 'Water Treatment Plant',
+			 'Plant Operation',
+			 'Casting foreman',
+			 'Rigging Foreman',
+			 'Scaffolding Foreman',
+			 'Mechanical Foreman',
+			 'Mines Foreman',
+			 'Shop Floor Supervisor',
+			 'Electrical Supervisor',
+			 'Piping Foreman',
+			 'Civil Foreman',
+			 'HVAC Foreman',
+			 'Shop/ Godown/ Warehouse'
+			 ];
+			 var backendBPO= [
+			 'Visa Processing',
+			 'Domestic Voice',
+			 'International',
+			 'Inbound',
+			 'Outbound',
+			 'Technical',
+			 'Non-Technical',
+			 'Handle Admin Responsibilities',
+			 'Customer Handling',
+			 'Patient Care',
+			 'Tele-Sales/ Tele-Calling',
+			 'Non-Voice',
+			 'Back Office Work',
+			 'BPO Operations',
+			 'HR Operation',
+			 'Ticket Booking'];
+			 var Repair =[
+			 'Repair/Servicing- Car A.C',
+			 'Repair/Servicing-Two Wheeler',
+			 'Repair/Servicing-Four Wheeler',
+			 'Repair/Servicing-Bus / Truck',
+			 'Repair/Servicing-Machinery',
+			 'Managing Auto Parts',
+			 'Entail installing, repairing, wiring, and maintaining of all electrical components found in vehicles',
+			 'Repair/Servicing-Three Wheeler',
+			 'Repair/Servicing- Tractor',
+			 'Diesel Fuel Injection Repairs and Services',
+			 'Carry out repairs of engine and related mechanical aggregates',
+			 'Vehicle Evaluation',
+			 'Vehicle Service Advice',
+			 'Handle Vehicle Breakdowns',
+			 'Reconditioned and replace pistons bearing gears and parts',
+			 'Repair and replace hydraulic pumps and generators',
+			 'Perform soldering welding and cutting to exact specification',
+			 'Perform calibration, installation, and maintenance of all types of industrial instrumentation devices',
+			 'Installed, repaired and maintained electrical and mechanical instruments',
+			 'Conducted scheduled and un-scheduled repair and maintenance work',
+			 'Wheel alignment work',
+			 'Handle Paint Shop Floor',
+			 'Repairs and overhauls electrical systems in automotive vehicles'];
+			  var worker =[
+			 'Loader/Unloader',
+			 'Goods Packing',
+			 'Any Work',
+			 'Work on Petrol Pump',
+			 'Shop/ Showroom',
+			 'Blast Furnace Keepers',
+			 'Furnace Operator',
+			 'Hot-Mill Tin Rollers',
+			 'Mill Utility Works',
+			 'Handle Cable Machine'];
+			var receptionist= [
+			 'Handle Visitor Desk',
+			 'Handle Inquiry Desk',
+			 'Handle Travel Desk',
+			 'Handle Clerical Work',
+			 'Handling calls',
+			 'Handling EPABX'
+			 ];
+			 var accountant= [
+			 'Book Keeping',
+			 'Cash Handling',
+			 'MIS',
+			 'Billing & Collection',
+			 'Payroll Processing',
+			 'VAT/ Income Tax /TDS',
+			 'Tally',
+			 'Accounts Payable and Receivable',
+				'Audit',
+				'Understanding the Purchase order, Purchase journal, supplier and payment details',
+				'Audit',
+				'Excise & Sales Tax',
+				'GST compliance',
+				'Financial Analysis',
+				'Budgeting',
+				'Complete Taxation',
+				'Maintain records/documents',
+				'Statutory compliance',
+				
+			 ];
+			 var textiles= [
+			 'Stitch -Shirt/ Pant',
+			 'Stitch- Blouse / Ladies suit',
+			 'Checker',
+			 'Cutting Master',
+			 'Measurement Checker',
+			 'Handmade Embroidery ',
+			 'Machinemade Embroidery'];
+			 
+			 var supplyChain= [
+			 'E-Commerce',
+			 'Material Management',
+			 'Order Management',
+			 'Inventory Management',
+			 'Procurement',
+			 'Vendor Management',
+			 'Logistics / Transport Operations',
+			 'Distribution',
+			 'Manufacturing Operations'];
+			 var cncVmc =[
+			 'Know Mould / Tool making process',
+			 'Set up and operate CNC Plasma machine',
+			 'Handle Laser Cutting Machine',
+			 'Handle Multi-Axis Machines',
+			 'Handle Gear Cutting Machine',
+			 'Handle Boring Machine ',
+			 'Can Manage CNC Router',
+			 'Do 2D programing and set the Machine',
+			 'Stamping and Assembly Die Handling and maintenance',
+			 'Documentation as per ISO 9001, TS 16949 Quality management systems',
+			 'Mould Spare management, Mould Health Checkup, Outsourcing Mould tracking',
+			 'Planning of Mould Maintenance, Maintain History card, MQBF',
+			 'Operating experience & knowledge of conventional grinding machines',
+			 'Proficient with FANUC controls',
+			 'Knowledge of machines and tools, including their designs, uses, repair, and maintenance',
+			 'Identify & Demonstrate Usage of Machine Safety & Personal Protective Equipment',
+			 'CNC Maintenance',
+			 'Can operate CNC machines to perform tasks such as drilling, grinding, milling etc.',
+			 'Core knowledge in CNC machine Design',
+			 'Operate double axis CNC vertical and horizontal mills effectively',
+			 'Set up and operated CNC vertical machining centers',
+			 'Setup,program,document all the processes to ensure accurate coding & operation of CNC',
+			 'Use measuring instruments such as micrometers, dial indicators and gauges',
+			 'Operated, set up and programmed CNC lathe and mill machines',
+			 'Handle VMC Machine',
+			 'Handle CNC Grinding',
+			 'Handle VMC Milling & Programming',
+			 'Knowledge of CAMWorks, CAM Software , CNC Software for Machine Tools',
+			 'CNC Lathe Wire cut Milling',
+			 'KAIZEN, LEAN Manufacturing, SIX SIGMA',
+			 'Handle CNC Turning Machines',
+			 'Know CNC Programming',
+			 'Review CAD models and/or blueprints',
+			 'Handle HMC Machine',
+			 'Capable to operate CNC turret punching machine',
+			 'Handle CNC Bending Machine'];
+			var business_dev= [
+			 'Building material, Cement industry',
+			 'Legal , Regulatory , Intellectual Property',
+			 'Educational Services',
+			 'Sales- Counter/ Showroom/ Shop',
+			 'Vehicle Insurance',
+			 'Agro Products',
+			 'Pharmaceutical/Healthcare Sales',
+			 'Ceramics / Sanitary ware',
+			 'Office Equipment/Automation',
+			 'Industrial Products/Heavy Machinery',
+			 'Paint Products / Cement',
+			 'Consumer Durable',
+			 'Sales Engineering Products',
+			 'Educational Institute',
+			 'Fitness /Beauty'
+			 ]; 
+			var arr= [
+				electrician_skills,
+				itiTrade,
+				injectionModuling,
+				qcontrol,
+				officeboy,
+				dataEntry,
+				technician,
+				formanSupervisor,
+				backendBPO,
+				Repair,
+				worker,
+				receptionist,
+				accountant,
+				textiles,
+				supplyChain,
+				cncVmc,
+				business_dev
+			];
+		</script>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<center><h4 style="color:red; font-family:verdana;margin-bottom:50px; margin-top:-20px;">Quick Job Post </h5></center>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<form>
+						<div id="mobile-label" style=";">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Mobile No.</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="mobile" placeholder="Mobile No." autofocus="autofocus" onfocus="inputfocus(this, 'Mobile No', 'mobile-label')" onblur="inputblur(this, 'Mobile No', 'mobile-label')"></center>
+
+						<div id="name-label" style="display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Job Title</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%; margin-top:20px;" name="name" placeholder="Job Title" onfocus="inputfocus(this, 'Job Title', 'name-label')" onblur="inputblur(this, 'Full Name', 'name-label')"></center>
+						<div id="gender-label" style="display:block; margin-top:20px;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Gender</p>
+						</div>
+							<center><input type="button" required class="mobile" style="border:1px solid red; background-color:white; width:40%;padding:5px; margin-top:10px;" name="name" onclick="func3(this)" value="Male"/>
+							<input type="button" required class="mobile" style="border:1px solid red; background-color:white; width:40%; margin-top:20px; padding:5px;" name="name" placeholder="Full Name" onfocus="inputfocus(this, 'Full Name', 'name-label')" onblur="inputblur(this, 'Full Name', 'name-label')" onclick="func3(this)" value="Female"/></center>
+						
+						<div id="language-label" style="margin-top:20px;display:block;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Preferred Language</p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white; width:30%; margin-top:20px;" name="lang" value="Hindi">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white; width:30%; margin-top:20px;" name="lang" value="Marathi">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="Telugu">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="Tamil">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="Kannada">
+							<input type="button" class="mobile" style="border:1px solid red; background-color:white;width:30%; margin-top:20px;" name="lang" value="English"></center>
+							
+							
+						</form>	
+							<center><button type="button" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('phone', 'email')" >CONTINUE</button></center>
+						
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="otp" style="padding-top:20px; display:none; margin:0px 20px;"> 
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<form>
+						<div id="OTP-label">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">OTP</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="otp" placeholder="OTP" maxlength="4" autofocus="autofocus" onfocus="inputfocus(this, 'OTP', 'OTP-label')" onblur="inputblur(this, 'OTP', 'OTP-label')"></center>
+						
+							<center><button type="button" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('otp', 'email')" >CONTINUE</button></center>
+						</form>	
+							
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="email" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+						
+						<div id="experience-label" style="display:block; margin-top:10px;">
+							<p  style="font-size:15px; font-family:poppins; color:black; margin-bottom:0px; display:block;"><b>Experience Required</b></p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="edu1" onclick="fun3(this)" value="Fresher">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp2" onclick="fun3(this)" value="0-2 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="2-5 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="5-10 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="10-15 years">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="above 15 years">
+							</center>
+							
+						<div id="education-label" style="display:block; margin-top:10px;">
+							<p  style="font-size:15px; font-family:poppins; color:black; margin-bottom:0px; display:block;"><b>Education</b></p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp1" onclick="fun3(this)" value="Below 10th">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp2" onclick="fun3(this)" value="10th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="12th Pass">
+							</center>
+						
+						<div id="salary-label" style="display:block; margin-top:10px;">
+							<p  style="font-size:15px; font-family:poppins; color:black; margin-bottom:0px; display:block;"><b> Salary Package</b></p>
+						</div>
+							<center><input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp1" onclick="fun3(this)" value="Rs 5000- 9000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp2" onclick="fun3(this)" value="Rs 9000-15000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 15000-20000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 20000-27000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 27000-35000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 35000-42000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 420000-55000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="Rs 55000-70000">
+							<input type="button" class="mobile" style="border:1px solid red;background-color:white;  width:30%; margin-top:20px; padding:5px;" name="exp3" onclick="fun3(this)" value="above Rs 70000">
+							</center>
+						
+						
+						</form>	
+							<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('email', 'jobs_3')" >CONTINUE</button></center>	
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="jobs_2" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="jobs-divs3">
+						
+						</div>
+						<script>
+						$(document).ready(function(){
+							$("#jobs-divs3").load("location.html");
+					
+						});
+						</script>
+							
+							
+						<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('jobs_2','jobs_3')" >CONTINUE</button></center>		
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="jobs_3" style="padding-top:10px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="jobs-divs2">
+							<div id="mobile-label3">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:8px; display:block;">Job Category :</p>
+						</div>
+						<center>
+							<select class="mobile" name="job_cat" style="border:1px solid red; width:100%;  height:35px; border-radius:5px;" id="mySelect" onchange="function1()">
+								<option selected value="0" >Electrician</option>
+								<option value= "1">ITI Trade</option>
+								<option value ="2">Injection Modeling</option>
+								<option value= "3">Quality Control</option>
+								<option value="4">Office Boy</option>
+								<option value="5">Data Entry Operator</option>
+								<option value="6">Technician</option>
+								<option value="7">Forman Supervisor</option>
+								<option value="8">Back End BPO/ Customer Care</option>
+								<option value="9">Mechanic /Technician/ Automobile </option>
+								<option value="10">Worker/ Helper</option>
+								<option value="11">Receptionist</option>
+								<option value="12">Accountant</option>
+								<option value="13">Textiles Worker</option>
+								<option value="14">Supply Chain Operator</option>
+								<option value="15">CNC/ VMC Operator</option>
+								<option value="16">Sales Business Development</option>
+							</select>
+							<script>
+								function function1()
+								{
+									var x = document.getElementById("mySelect").value;
+									var i;
+									var text='';
+									var y= arr[x];
+									for (i = 0; i < arr[x].length; i++) { 
+										text += '<input type="checkbox" name="skills"><span class="checkmark"></span> '+y[i] + "<br/>";
+									}
+									document.getElementById('demo').innerHTML= text;
+									
+
+								}
+							</script>
+						</div>
+						<div id="mobile-label4" >
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:8px; display:block;">Skill Required :</p>
+						</div>
+						<div id="demo">
+						</div>
+						<div>
+							<h4 onclick="shownewskill()">+ Add Skills </h4>
+							<input type="text" name="newskills" style="display:none;" id="newskill"/>	
+						</div>		
+						<script>
+							function shownewskill()
+							{
+								document.getElementById('newskill').style.display="block";
+							}
+						</script>
+						<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#4A4D4E; border-radius:0px;" onclick="next('jobs','blank')" >Done</button></center>		
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<script>
+			function next(x,y)
+			{
+				document.getElementById(x).style.display= "none";
+				document.getElementById(y).style.display= "block";
+			}
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+				if(x.value != '')
+				{
+					
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+			function func3(x)
+			{
+				x.style.backgroundColor= "gray";
+				x.style.color= "white";
+			}
+		</script>

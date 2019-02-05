@@ -1,0 +1,108 @@
+<section id="div-form" style=" margin-right:20px; ">
+				
+			<div class="container-fluid" style="">
+				
+				<div class="row">
+					<div class="col-md-4" style="background-color:#4A4D4E; height:500px; margin-bottom:-200px;">
+							<center><h2 style="color:white; font-family:poppins; margin-top:200px;">Quick Job Post</h2></center>
+					</div>
+					<div class="col-md-8 col-xs-12" style="padding:10px 50px;">
+						<form>
+						<div style="height:30px; width:100%;">	
+							<div id="company-label">
+								<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Company Name</p>
+							</div>		
+						</div>
+						
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%"autofocus="autofocus"  name="mobile" placeholder="Email/Mobile No." onfocus="inputfocus(this, 'Company Name', 'company-label')" onblur="inputblur(this, 'Company Name', 'company-label')"></center>
+						
+						<div id="mobile-label" style="float:left;display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">Mobile No.</p>
+						</div>
+						
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="Mobile No." onfocus="inputfocus(this, 'Mobile No.', 'mobile-label')" onblur="inputblur(this, 'Mobile No.', 'mobile-label')"></center>
+						
+						<div id="email-label" style="float:left;display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">Email.</p>
+						</div>
+						
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="Email" onfocus="inputfocus(this, 'Email', 'email-label')" onblur="inputblur(this, 'Email.', 'email-label')"></center>
+						
+						
+						<div style="width:45%; float:left; height:80px;">
+						<div id="location-label" style="float:left;display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">State</p>
+						</div>
+						
+							<center><select required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="State" onfocus="inputfocus(this, 'State', 'location-label')" onblur="inputblur(this, 'State', 'location-label')">
+										<option>Rajasthan</option>
+										<option>Chhattisghar</option>
+										<option>Madhya Pradesh</option>
+										<option>Uttar Pradesh</option>
+										
+									</select>	
+							
+							</center>
+						</div>
+						
+						<div style="width:45%; float:left; height:80px;margin-left:10px;">
+						<div id="location2-label" style="float:left;display:none; ">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">City</p>
+						</div>
+						
+							<center>
+								<select required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="City" onfocus="inputfocus(this, 'City', 'location2-label')" onblur="inputblur(this, 'City', 'location2-label')">
+									<option>Jaipur</option>
+									<option>Jodhpur</option>
+									<option>Bikaner</option>
+								</select>	
+							</center>
+						</div>
+						
+						
+						<div id="job-label" style="float:left;display:block; ">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">Job Role</p>
+						</div>
+						
+							<center>
+								<select required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="job" onfocus="inputfocus(this, 'City', 'job-label')" onblur="inputblur(this, 'City', 'job-label')">
+									<option>Electrician</option>
+									<option>Technician</option>
+									<option>Peon</option>
+								</select>	
+							</center>
+						
+							<br/>
+							<center><input type="submit" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="login" value="CONTINUE" onclick="get_otp()"></center>
+						</form>
+							
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<script>
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+		</script>

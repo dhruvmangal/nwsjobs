@@ -1,0 +1,61 @@
+<section id="div-form" style=" margin-right:20px; ">
+				
+			<div class="container-fluid" style="">
+				
+				<div class="row">
+					<div class="col-md-4" style="background-color:#4A4D4E; height:500px; margin-bottom:-200px;">
+							<center><h2 style="color:white; font-family:poppins; margin-top:200px;">COMPANY LOGIN</h2></center>
+					</div>
+					<div class="col-md-8 col-xs-12" style="padding:10px 50px;">
+						<form>
+						<div style="height:30px; width:100%;">	
+							<div id="mobile-label">
+								<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Email/Mobile</p>
+							</div>		
+						</div>
+						
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%" name="mobile" placeholder="Email/Mobile No." autofocus="autofocus" onfocus="inputfocus(this, 'Email/Mobile No', 'mobile-label')" onblur="inputblur(this, 'Email/Mobile No', 'mobile-label')"></center>
+							
+						<div id="password-label" style="float:left;display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; margin-top:10px; ">Password</p>
+						</div>
+						<div id="forgot" style="float:right; cursor:pointer;" onclick="show_forget()">
+							<p  style="font-size:12px; font-family:poppins; color:#3b5998; margin-bottom:0px; margin-top:10px; display:block;" onclick="forgot()">Forgot?</p>
+						</div>
+						
+							<center><input type="Password" required class="mobile" style=" text-indent:18px;border:none; border-bottom:1px solid #4A4D4E;outline: none; width:100%; margin-top:15px;" name="mobile" placeholder="Password." onfocus="inputfocus(this, 'Password', 'password-label')" onblur="inputblur(this, 'Password', 'password-label')"></center>
+							
+							<center><input type="submit" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="login" value="LOG IN"></center>
+						</form>
+							<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px; box-shadow: 1px 1px 3px gray;" onclick="register()">New to NWC Jobs? Register</button></center>
+						
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<script>
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+		</script>

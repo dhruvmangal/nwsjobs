@@ -1,0 +1,236 @@
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		
+		<script>
+			$(document).ready(function(){
+					$("#filter").load("filter-candidate.html");
+					$("#candidate").load("candidate-listing.html");
+					$("#candidate-description").load("ad.html");
+					var x = window.matchMedia("(max-width: 700px)")
+					if (x.matches) {
+						$("#").click(function(){
+							$("#candidate-description").load("candidate-des.html");
+						});
+					}
+					$("#close").click(function()
+					{
+						$("#popup").remove();
+					}
+				);
+				});
+
+			
+				function load_candidate()
+				{
+					$("#candidate-description").load("candidate-des.html");
+				}
+				function login(){
+					$("#popup-div").load("log2.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function close_div()
+				{
+					$("#popup-div").empty();
+					document.getElementById("popup").style.display="none";
+				}
+				function close_des()
+				{
+					$("#candidate-description").empty();
+					$("#candidate-description").load("ad.html");
+				}
+				function register(){
+					$("#popup-div").load("reg2 	.html");
+					document.getElementById("popup").style.display="block";
+
+				}
+				function category()
+				{
+					$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function location_12()
+				{
+					$("#popup-div").load("location.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function education()
+				{
+					$("#popup-div").load("education.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("job_role").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+				}
+				function select_location(x)
+				{
+					document.getElementById("location_12").value= x;
+				}
+				function skills()
+				{
+					$("#popup-div").load("skills.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function qjp()
+				{
+					$("#popup-div").load("quickjob.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function get_otp()
+				{
+					$("#popup-div").load("get_otp.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+		
+		</script>
+		<body style="background-color:#fafafa;">
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+					</div>
+				</div>	
+			</div>
+			<header>
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							
+							<div class="fleft" >
+								<h6 style="margin-top:-3px; color:white;">Looking for a job</h6>
+								<h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;text-align:center;">Click Here</h5>
+								
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:10px;"><img src="img/whatsapp.png" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+								
+						</div>
+						
+						
+						
+					</div>
+				</div>
+			</header>
+			<section style="padding-top:100px; ">
+				<div class="container" style="background-color:white; padding:30px;">
+					<div class="row">
+						<div class="col-md-4 form-group">
+							<label for="job title">Job Title</label>
+							<input type="text" name="job_title" style="outline: none;border:none; border-bottom:1px solid #4A4D4E; width:100%; padding-top:10px; margin:0px 5px;"class="" placeholder="Junior Electrician"/>
+						</div>
+						<div class="col-md-4 form-group">
+							<label for="job title">Education</label>
+							<select name="education" style="outline: none;border:none; border-bottom:1px solid #4A4D4E; width:100%; padding-top:10px; margin:0px 5px;"class="" placeholder="10th Pass">
+								<option>Below 10th</option>
+								<option>10th Pass</option>
+								<option>12th Pass</option>
+							</select>
+						</div>
+						<div class="col-md-4 form-group">
+							<label for="job title">Salary</label>
+							<select name="job_title" style="outline: none;border:none; border-bottom:1px solid #4A4D4E; width:100%; padding-top:10px; margin:0px 5px;"class="" placeholder="Junior Electrician"/>
+								<option>9000 to 15000</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-4 form-group">
+							<label for="job title">Experience</label>
+							<select name="education" style="outline: none;border:none; border-bottom:1px solid #4A4D4E; width:100%; padding-top:10px; margin:0px 5px;"class="" placeholder="10th Pass">
+								<option>Fresher</option>
+								<option>0 - 2 Years</option>
+								<option>2 - 5 Years</option>
+							</select>						</div>
+						<div class="col-md-4 form-group">
+							<label for="job title">Gender</label>
+							<select name="education" style="outline: none;border:none; border-bottom:1px solid #4A4D4E; width:100%; padding-top:10px; margin:0px 5px;"class="" placeholder="10th Pass">
+								<option>Male</option>
+								<option>Female</option>
+								<option>Both</option>
+							</select>
+						</div>
+						<div class="col-md-4 form-group">
+							<label for="job title">Firm/ Business Address</label>
+							<input type="text" name="job_title" style="outline: none;border:none;background-color:white; border-bottom:1px solid #4A4D4E; width:100%; padding-top:10px; margin:0px 5px;"class="" placeholder="1/25, Govind Nagar, Jaipur "/>
+								
+						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<label for=""> How will you get contacted</label>
+								<input type="text" name="job_title" style="outline: none;border:none; border-bottom:1px solid #4A4D4E; width:20%; padding-top:10px; margin:0px 5px;"class="" disabled placeholder="8426020355 "/>
+								<input type="checkbox" name="rad"> Yes, I would like to receive application via Whatsapp.
+						</div>
+					</div>
+					<div class="row" style="padding:10px 10px;">
+						<label for="job title">Job Description</label>
+						<textarea  class="form-control" rows="10">
+	Duties to perform
+1.	Install and maintain wiring systems. 
+2.	Inspect electrical components, such as transformers and circuit breakers.
+3.	Identify electrical problems with a variety of testing devices. 
+4.	Repair or replace wiring, equipment, or fixtures using hand tools and power tools.
+
+
+
+																															
+						
+						</textarea>
+					<div style="float:right: margin-right:0px;">Maximum 1000 Words</div>
+					</div>
+					<div class="row">
+						<div style="float:right; margin-right:10px;">
+							<button class="btn" style="background-color:red; color:white;">Proceed to Payment</button>
+						</div>
+					</div>
+				</div>	
+			</section>
+			<script>
+				function highlight(x)
+				{
+					x.style.border= '1px solid red';
+				}
+			</script>

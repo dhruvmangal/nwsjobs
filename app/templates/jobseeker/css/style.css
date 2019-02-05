@@ -1,0 +1,322 @@
+			header{
+				position:fixed;
+				background-color:white;
+				width:100%;
+			}
+			p{
+				line-height:12px;
+			}
+			#upper-header{
+				width:100%;
+				height:3px;
+				background-color:red;
+			}
+			#filter{
+				padding-top:230px;	
+				float:left;
+				width:22%;
+				height:auto;
+			}
+			#profile_div{
+				padding-top:50px;	
+				float:left;
+				width:22%;
+				height:100%;
+				
+			}
+			#job-listing2{
+				margin-top:50px;
+				border:1px solid #dbdbdb;
+				border-radius:6px;
+				padding:20px;
+				float:left;
+				width:30%;
+				
+			}
+			#job-description2{
+				margin-top:50px;
+				border-radius:6px;
+				background-color:#f6f6f6;
+				padding:0px 2px;
+				float:left;
+				width:45%;
+				height:500px;;
+				
+			}
+			#filter-div{
+				border:1px solid #dbdbdb;
+				border-radius:6px;
+				padding:20px;
+				margin:0px 10px;
+			}
+			#job-listing{
+				margin-top:220px;
+				border:1px solid #dbdbdb;
+				border-radius:6px;
+				padding:20px;
+				float:left;
+				width:30%;
+				
+			}
+			#candidate-listing{
+				margin-top:230px;
+				border:1px solid #dbdbdb;
+				border-radius:6px;
+				padding:20px;
+				float:left;
+				width:45%;
+				
+			}
+			#job-description{
+				margin-top:220px;
+				border-radius:6px;
+				background-color:#f6f6f6;
+				padding:0px 2px;
+				float:left;
+				width:45%;
+				height:auto;
+				
+			}
+			#candidate-description{
+				margin-top:230px;
+				border-radius:6px;
+				background-color:#FBFBFB;
+				padding:0px 2px;
+				float:left;
+				width:30%;
+				height:500px;;
+				
+			}
+			#ad{
+				border: 2px solid #dbdbdb;
+				padding:10px;
+				width:40%;
+				margin:20px;
+			}
+			#ad-icon{
+				
+				font-size:60px;
+				color:#47a1d0;
+				}
+			#upper-middle{
+				border-bottom:1px solid #f6f6f6;
+			}	
+			.job-close{
+				font-family:poppins;
+				color:black;
+				margin-top:10px;
+				margin-bottom:0px;
+				margin-left:90%;
+				
+			}
+			#popup{
+				position: fixed;
+				width:100%;
+				height:100%;
+				background-color:#191919;
+				overflow-x: hidden; 
+			}
+			.fright:hover{
+				color:blue;
+				cursor:pointer;
+			}
+			.job-emp{
+				color:#47a1d0;
+			}
+			.search-text{
+				color:#333333;
+				font-family:verdana;
+				
+			}
+			.form-select{
+				border:1px solid blue;
+				
+			}
+			.job-des{
+				position:fixed;
+				border:1px solid #dbdbdb;
+				width:45%;
+				height:auto;
+				padding-left:40px;
+				background-color:#f6f6f6;
+				
+				
+			}
+			.candidate-des{
+				position:fixed;
+				border:1px solid #dbdbdb;
+				width:auto;
+				height:500px;
+				overflow:scroll;
+				padding-left:40px;
+				background-color:#FBFBFB;
+				
+				
+			}
+			.ad-text{
+				font-family:poppins;
+			}	
+			.ad-btn{
+				color:red;
+				background-color:white;
+				border: 1px solid red;
+				padding:5px;
+				margin:10px;
+			}
+			.logo{
+				float:left;
+				height:auto;
+				margin-top:20px;
+				width:25%;
+				
+			}
+			.fleft{
+				color:#47a1d0;
+				margin:5px 20px;
+				float:left;
+				font-family:poppins;
+			}
+			.fright{
+				color:#47a1d0;
+				margin:5px 20px;
+				float:right;
+				font-family:poppins;
+				
+			}
+			.logo-img{
+				margin-left:30px;
+				padding:10px 10px;
+				width:100px;
+				height:auto;
+			}
+			.logo-txt{
+				margin-left:30px;
+				padding:0px 15px;
+				width:100px;
+				height:auto;
+				color:red;
+			}
+			.fil{
+				font-family:poppins;
+				color:#1295c9;
+				font-size:16px;
+				
+			}
+			.filter-radio{
+				margin-left:30px;
+			}
+			.job-heading{
+				
+				cursor:pointer;
+			}
+			.search{
+				padding:25px;
+				float:left;
+				height:auto;
+			}
+			.search-job-title{
+				float:left;
+				margin:10px 30px;
+				border:1px solid red;
+				border-radius:10px;
+				background-color:red;
+				color:white;
+				padding:0px 5px;
+			}
+			.search-job{
+				
+				float:left;
+				margin:0px 30px;
+				color:#47a1d0;
+				font-family:poppins;
+				padding:3px 8px;
+				border-radius:8px;
+				cursor:pointer;
+				
+			}
+			.job-btn{
+				padding:5px;
+				color:red;
+				font-size:16px;
+				background-color:white;
+				border:1px solid red;
+				border-radius:4px;
+			}
+			#profile{
+				float:right;
+				padding-top:40px;
+				padding-left:60px;	
+			}
+			.mobile:focus{
+	outline:none;
+	outline-bottom:1px solid red;
+}
+.mobile::-webkit-input-placeholder{
+	color:black;
+	font-size:14px;
+	vertical-align:0px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.profile-div{
+	margin:0px 10%;
+	padding-top:250px;
+	float:left;
+	width:20%;
+}
+	.profile-heading{
+		border-radius:5px;
+		background-color:#47a1d0;
+		border:1px solid white;
+		margin-bottom:3px;
+		color:white
+	}
+	.profile-body{
+		border-radius:5px;
+		border:1px solid gray;
+		padding-left:40px;
+		padding-top:10px;
+		font-family:poppins;
+	}
+	nav{
+		width:20%;
+		height:auto;
+		float:left;
+	}	
+.nav-item{
+padding-top:10px;
+	padding-left:60px;
+	margin-right:30px;
+}
+#profile-content{
+	float:left;
+	width:50%;
+	margin:0px 20x;
+	padding:30px;
+	padding-top:180px;
+}
+#profile-nav{
+	padding-top:180px;	
+	float:left;
+	width:30%;
+	height:100%;
+}
+.active{
+	color:gray;
+}

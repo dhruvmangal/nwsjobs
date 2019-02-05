@@ -1,0 +1,304 @@
+		<script>
+			var electrician_skills = ['Installing Basic home appliances ',
+			'Knowlede of Mechanical', 
+			'Electrial and hydrolic circuits',
+			'Constructs, operates, maintains and repairs overhead underground power distribution system  ',
+			'Schamatic Diagram interpretation',
+			'blue proint reading',
+			'Carry out wiring process',
+			'install feeder pipe in panel',
+			'RIG electrician'];
+			
+			var itiTrade= ['plumber',
+			'Forger & Heat Treat',
+			' Turner',
+			 'Welder'];
+			 var injectionModuling= ['Injection Module Design', 
+			 'Regulate molding temperature, volume, pressure, and time',
+			 'Sets machine controls, regulating molding temperature, volume of plastic, molding pressure and time, according to knowledge of plastics and molding procedures.', 
+			 'Operate compression or injection molding machines',
+			 'Troubleshoot and adjust molding parameters to maintain quality and maximum product output',
+			 'Develop and document manufacturing instructions and data sheets',
+			 'Mold and cast metal or thermoplastic parts',
+			 'Operate metal and plastic molding and casting machines'
+			 ];
+			 var qcontrol= [
+			 'Garment',
+			 'Pharmaceutical',
+			 'Energy/Power',
+			 'Gems & Jewellery',
+			 'Construction/Engineering',
+			 'Automobile/Auto Ancillary',
+			 'Industrial Product'
+			 ];
+			 var officeboy= [
+			 'Cleaning and maintenance',
+			 'Pantry Work',
+			 'Field Work',
+			 'Filing Document ',
+			 'Handle Bank Related Clerical Work',
+			 'Office work'
+			 ];
+			  var dataEntry=[
+			 'Fast & Accurate Typing',
+			 'MIS Reports',
+			 'Office Administration',
+			 'Computer Accounting with Tally',
+			 'Data Entry Work',
+			 'Proficient in using the internet and email',
+			 'Letter Drafting',
+			 'Prepare, manage and file documents',
+			 ];
+			 var technician= [
+			 'GPS Tracking and Biometric System ',
+			 'Operate Diesel Generator',
+			 'Repair of Computers/ Laptop',
+			 'Chilling Plant',
+			 'Air Compressor',
+			 'Repair Air Conditioner',
+			 'Repair TV',
+			 'Repair Refrigerator',
+			 'Repair Washing Machine',
+			 'Repair and Maintenance of Inverter and UPS',
+			 'Repair Cooler',
+			 'Repair Mobile/ Tablet',
+			 'Consumer Energy Meter Technician',
+			 'Repair Water Purifier',
+			 'CCTV',
+			 'OT',
+			 'Elevator/ Lift',
+			 'DTH-Set Top Installer & Service Technician',
+			 'Solar Panel Installation Technician',
+			 'Fruits and Vegetables Drying/ Dehydration',
+			 'Repair/Maintenance-Office Electronics',
+			 'Repair Microwave Oven',
+			 'Repair-Electric kettle,Iron,Mixer',
+			 'Mobile Phone Tower',
+			 'Diesel Generator Services',
+			 'Maintenance of industrial machines',
+			 'Installing an HVAC system',
+			 'Installation of various transducer, sensor',
+			 'Music System',
+			 'Medical Equipment Repair',
+			 'Correction and repair of broadband service',
+			 'Consumer energy meter technician'
+			 ];
+			 var formanSupervisor= [
+			 'Water Treatment Plant',
+			 'Plant Operation',
+			 'Casting foreman',
+			 'Rigging Foreman',
+			 'Scaffolding Foreman',
+			 'Mechanical Foreman',
+			 'Mines Foreman',
+			 'Shop Floor Supervisor',
+			 'Electrical Supervisor',
+			 'Piping Foreman',
+			 'Civil Foreman',
+			 'HVAC Foreman',
+			 'Shop/ Godown/ Warehouse'
+			 ];
+			 var backendBPO= [
+			 'Visa Processing',
+			 'Domestic Voice',
+			 'International',
+			 'Inbound',
+			 'Outbound',
+			 'Technical',
+			 'Non-Technical',
+			 'Handle Admin Responsibilities',
+			 'Customer Handling',
+			 'Patient Care',
+			 'Tele-Sales/ Tele-Calling',
+			 'Non-Voice',
+			 'Back Office Work',
+			 'BPO Operations',
+			 'HR Operation',
+			 'Ticket Booking'];
+			 var Repair =[
+			 'Repair/Servicing- Car A.C',
+			 'Repair/Servicing-Two Wheeler',
+			 'Repair/Servicing-Four Wheeler',
+			 'Repair/Servicing-Bus / Truck',
+			 'Repair/Servicing-Machinery',
+			 'Managing Auto Parts',
+			 'Entail installing, repairing, wiring, and maintaining of all electrical components found in vehicles',
+			 'Repair/Servicing-Three Wheeler',
+			 'Repair/Servicing- Tractor',
+			 'Diesel Fuel Injection Repairs and Services',
+			 'Carry out repairs of engine and related mechanical aggregates',
+			 'Vehicle Evaluation',
+			 'Vehicle Service Advice',
+			 'Handle Vehicle Breakdowns',
+			 'Reconditioned and replace pistons bearing gears and parts',
+			 'Repair and replace hydraulic pumps and generators',
+			 'Perform soldering welding and cutting to exact specification',
+			 'Perform calibration, installation, and maintenance of all types of industrial instrumentation devices',
+			 'Installed, repaired and maintained electrical and mechanical instruments',
+			 'Conducted scheduled and un-scheduled repair and maintenance work',
+			 'Wheel alignment work',
+			 'Handle Paint Shop Floor',
+			 'Repairs and overhauls electrical systems in automotive vehicles'];
+			  var worker =[
+			 'Loader/Unloader',
+			 'Goods Packing',
+			 'Any Work',
+			 'Work on Petrol Pump',
+			 'Shop/ Showroom',
+			 'Blast Furnace Keepers',
+			 'Furnace Operator',
+			 'Hot-Mill Tin Rollers',
+			 'Mill Utility Works',
+			 'Handle Cable Machine'];
+			var receptionist= [
+			 'Handle Visitor Desk',
+			 'Handle Inquiry Desk',
+			 'Handle Travel Desk',
+			 'Handle Clerical Work',
+			 'Handling calls',
+			 'Handling EPABX'
+			 ];
+			 var accountant= [
+			 'Book Keeping',
+			 'Cash Handling',
+			 'MIS',
+			 'Billing & Collection',
+			 'Payroll Processing',
+			 'VAT/ Income Tax /TDS',
+			 'Tally',
+			 'Accounts Payable and Receivable',
+				'Audit',
+				'Understanding the Purchase order, Purchase journal, supplier and payment details',
+				'Audit',
+				'Excise & Sales Tax',
+				'GST compliance',
+				'Financial Analysis',
+				'Budgeting',
+				'Complete Taxation',
+				'Maintain records/documents',
+				'Statutory compliance',
+				
+			 ];
+			 var textiles= [
+			 'Stitch -Shirt/ Pant',
+			 'Stitch- Blouse / Ladies suit',
+			 'Checker',
+			 'Cutting Master',
+			 'Measurement Checker',
+			 'Handmade Embroidery ',
+			 'Machinemade Embroidery'];
+			 
+			 var supplyChain= [
+			 'E-Commerce',
+			 'Material Management',
+			 'Order Management',
+			 'Inventory Management',
+			 'Procurement',
+			 'Vendor Management',
+			 'Logistics / Transport Operations',
+			 'Distribution',
+			 'Manufacturing Operations'];
+			 var cncVmc =[
+			 'Know Mould / Tool making process',
+			 'Set up and operate CNC Plasma machine',
+			 'Handle Laser Cutting Machine',
+			 'Handle Multi-Axis Machines',
+			 'Handle Gear Cutting Machine',
+			 'Handle Boring Machine ',
+			 'Can Manage CNC Router',
+			 'Do 2D programing and set the Machine',
+			 'Stamping and Assembly Die Handling and maintenance',
+			 'Documentation as per ISO 9001, TS 16949 Quality management systems',
+			 'Mould Spare management, Mould Health Checkup, Outsourcing Mould tracking',
+			 'Planning of Mould Maintenance, Maintain History card, MQBF',
+			 'Operating experience & knowledge of conventional grinding machines',
+			 'Proficient with FANUC controls',
+			 'Knowledge of machines and tools, including their designs, uses, repair, and maintenance',
+			 'Identify & Demonstrate Usage of Machine Safety & Personal Protective Equipment',
+			 'CNC Maintenance',
+			 'Can operate CNC machines to perform tasks such as drilling, grinding, milling etc.',
+			 'Core knowledge in CNC machine Design',
+			 'Operate double axis CNC vertical and horizontal mills effectively',
+			 'Set up and operated CNC vertical machining centers',
+			 'Setup,program,document all the processes to ensure accurate coding & operation of CNC',
+			 'Use measuring instruments such as micrometers, dial indicators and gauges',
+			 'Operated, set up and programmed CNC lathe and mill machines',
+			 'Handle VMC Machine',
+			 'Handle CNC Grinding',
+			 'Handle VMC Milling & Programming',
+			 'Knowledge of CAMWorks, CAM Software , CNC Software for Machine Tools',
+			 'CNC Lathe Wire cut Milling',
+			 'KAIZEN, LEAN Manufacturing, SIX SIGMA',
+			 'Handle CNC Turning Machines',
+			 'Know CNC Programming',
+			 'Review CAD models and/or blueprints',
+			 'Handle HMC Machine',
+			 'Capable to operate CNC turret punching machine',
+			 'Handle CNC Bending Machine'];
+			var business_dev= [
+			 'Building material, Cement industry',
+			 'Legal , Regulatory , Intellectual Property',
+			 'Educational Services',
+			 'Sales- Counter/ Showroom/ Shop',
+			 'Vehicle Insurance',
+			 'Agro Products',
+			 'Pharmaceutical/Healthcare Sales',
+			 'Ceramics / Sanitary ware',
+			 'Office Equipment/Automation',
+			 'Industrial Products/Heavy Machinery',
+			 'Paint Products / Cement',
+			 'Consumer Durable',
+			 'Sales Engineering Products',
+			 'Educational Institute',
+			 'Fitness /Beauty'
+			 ]; 
+			var arr= [
+				electrician_skills,
+				itiTrade,
+				injectionModuling,
+				qcontrol,
+				officeboy,
+				dataEntry,
+				technician,
+				formanSupervisor,
+				backendBPO,
+				Repair,
+				worker,
+				receptionist,
+				accountant,
+				textiles,
+				supplyChain,
+				cncVmc,
+				business_dev
+			];
+			
+		</script>
+		<div >
+	<center><h5 style="color:gray; padding-top:10px; padding-bottom:20px;"><b>My Skills Include</b></h5></center>
+	
+	<div id="demo_1" style="margin:10px;">
+	</div>
+	<script>
+	
+	
+								$(document).ready(function(){
+									var i;
+									var text='';
+									var y= arr[8];
+									for (i = 0; i < arr[8].length; i++) {
+										if(i%2==0)
+										{		
+										text += '<p style="color:black;font-size:12px; background-color:#E3FFBB;padding:8px 10px; font-family:poppins;cursor:pointer; " onclick="fun2(this)">'+y[i] + "<span style='float:right;margin-left:10px;'></span></p>";
+										}
+										else
+										{
+											text += '<p style="color:black;font-size:12px; background-color:#EBEBEB; padding:8px 10px; font-family:poppins; cursor:pointer; onclick="fun2("str1")">'+y[i] + "<span style='float:right;margin-left:10px; display:none;' id='str2'></span></p>";
+										}
+									}
+									document.getElementById('demo_1').innerHTML= text;					
+								});
+								function fun2(x){
+									document.getElementById('str2').style.display="block";
+								}
+							</script>	
+</div>	

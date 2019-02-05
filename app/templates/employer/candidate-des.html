@@ -1,0 +1,36 @@
+<div class="candidate-des" id="job-des" style=" margin-bottomL50px;">
+	
+	<div class="job-close" style="cursor:pointer;">
+		<h4 onclick="close_des()" >&times;</h4>
+	</div>
+	<div style="width:100%; padding-bottom:10px;">
+		<center><a href="img/sample.pdf" download="pdf"><button style="background-color:white; font-family:poppins; border:1px solid #D2D2D2; border-radius:5px;" class="btn"><i class="fa fa-download"></i> Download Resume</button></a></center>
+	</div>
+	<div class="job-heading" onclick="load_des()" style="width:100%;">
+		<p style="color:gray; text-align:justify;line-height: 15pt; padding-right:20px;">I am Looking for <b>CNC Mechanist job</b> across punjab having experience of 2-5 years.	</p>
+	</div>
+	<br/>
+	<p><b><span style="float:left">Education: 10th Pass</span><span style="float:right; margin-right:20px;">Gender: Male</span><br/><br/><span style="float:left; padding-top:10px;"> Expected Salary: Rs 5000-10000 </span></b></p>
+	<p style="float:right; padding-right:20px;"><b>Location:</b>Jaipur</p>
+	<br/>
+
+	<hr/>
+	<div style=" font-family:poppins;">
+	</div>
+	<!--<div style="padding-bottom:20px; font-family:poppins;">
+		<button style="background-color:red; color:white; font-size:10px;" class="btn">Hire Candidate NOW</button>
+	</div>-->
+		
+	<div id="fit" style="line-height: 15pt;text-align:justify; margin-top:-40px; margin-bottom:50px;">
+		</div>
+<script>
+	function change()
+	{
+		document.getElementById('contact_company').style.display= 'none';
+		document.getElementById('company_contact').style.display='block';
+	}
+	$(document).ready(function(){
+					$("#fit").load("skills.html");
+					
+				});
+</script>

@@ -1,0 +1,420 @@
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		<style>
+			#job-method{
+				padding-top:50px;
+				width:100px;
+				height:auto;
+				z-index:1;
+			}
+			#function-sec{
+				padding-top:80px;
+				position:fixed;
+				top:0px;	
+				width:100%;
+				background-color:white;
+				z-index:1;
+			}
+			
+			.main-logo{
+			width:100px;
+			height:auto;}
+			
+			.no-display-desktop{
+					display:none;
+				}
+				
+			#job-function-mob{
+				display:none;
+			}
+			
+			#filter-line{
+				display:none;
+				}	
+				
+			.select_btn{
+				cursor:pointer;
+				background-color:white;
+				color:#4A4D4E;
+				padding:15PX;
+				border:1px solid gray;
+				border-radius:5px;
+				
+			}	
+			@media screen and (max-width: 900px) {
+				#header{
+					display:none;
+				}	
+				#job-method{
+					padding-top:0px;
+					position:fixed;
+					width:100%;
+					z-index:1;
+				}
+				#function-sec{padding-top:15PX;}
+				#filter{
+					display:none;
+				}
+				#job-description{
+					display:none;
+				}
+				#job-function{
+					display:none;
+				}
+				#job-function-mob{
+				display:block;
+				}
+				.no-display-desktop{
+					display:block;
+					margin-top:50px;
+				}
+				.main-logo{
+					width:70px;
+					height:auto;
+					padding-bottom:15PX;
+					}
+					#filter-line{
+						display:block;
+					}
+			
+	
+			}
+
+		</style>
+		<script>
+			$(document).ready(function(){
+					$("#filter").load("filter.html");
+					$("#jobs").load("job-listing.html");
+					$("#job-description").load("ad.html");
+					
+					var x = window.matchMedia("(max-width: 700px)")
+					if (x.matches) {
+						$("#").click(function(){
+							$("#job-description").load("job-des.html");
+						});
+					}
+					$("#close").click(function()
+					{
+						$("#popup").remove();
+					}
+				);
+				});
+
+				function show_job_func(){
+					document.getElementById('job-function-mob').style.display= "block";
+					document.getElementById('job-functon-btn1').style.display= "none";
+					document.getElementById('job-functon-btn2').style.display= "block";
+				}
+				function hide_job_func(){
+					document.getElementById('job-function-mob').style.display= "none";
+					document.getElementById('job-functon-btn1').style.display= "block";
+					document.getElementById('job-functon-btn2').style.display= "none";
+				}
+				function load_des()
+				{
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "jobView.html";
+						}
+					else{
+					$("#job-description").load("job-des.html");
+					}
+				}
+				function filter()
+				{
+					window.location.href = "filters.html";
+				}
+				function login(){
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "log-mob.html";
+						}
+					else{
+						$("#popup-div").load("log.html");
+						document.getElementById("popup").style.display="block";
+					}
+					
+				}
+				function close_div()
+				{
+					$("#popup-div").empty();
+					document.getElementById("popup").style.display="none";
+				}
+				function close_des()
+				{
+					$("#job-description").empty();
+					$("#job-description").load("ad.html");
+				}
+				function register(){
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "signup.html";
+						}
+					else{
+						$("#popup-div").load("reg.html");
+					document.getElementById("popup").style.display="block";
+					}
+					
+
+				}
+				function category()
+				{
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "cat-mob.html";
+						}
+					else{
+						$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+					}
+					
+				}
+				function location_12()
+				{
+					$("#popup-div").load("location.html");
+					document.getElementById("popup").style.display="block";
+				}
+				function education()
+				{
+					
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "education.html";
+						}
+					else{
+						$("#popup-div").load("cat.html");
+					document.getElementById("popup").style.display="block";
+					document.getElementById("education").style.display="none";
+					document.getElementById("location_div").style.display= "block";
+					}
+				}
+				function select_location(x)
+				{
+					document.getElementById("location_12").value= x;
+				}
+				function skills()
+				{
+					$("#popup-div").load("skills.html");
+					document.getElementById("popup").style.display="block";
+					
+				}
+				function fill_background(x,y)
+				{
+					var t= document.getElementById(y).style.color;
+					alert(t);
+					if(t== 'white')
+					{
+						document.getElementById(y).style.color="black";
+						x.style.backgroundColor="#white";
+					}
+					if(t== 'black')
+					{
+						document.getElementById(y).style.color="white";
+						x.style.backgroundColor="#4A4D4E";
+					}
+				}
+		
+		
+		</script>
+		<body>
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:15PX; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+					</div>
+				</div>	
+			</div>
+			<header style="z-index:2;" id="header">
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							<div class="fleft">
+								<h5 style="color:white;color:white;border:none; border-radius:5px; padding:5px;">Mitra</h5>
+								
+							</div>
+							<div class="fleft">
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">College</h5>
+								
+							</div>
+							<div class="fleft" >
+								<h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;" class="nonne">Employer</h5>
+								
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:15PX;"><img src="img/whatsapp.png" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</header>
+			<section style="padding-top:150px;">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<center><h4>Work Experience</h4></center>
+						</div>
+					</div>
+					<form>	
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="job role">Job Role</label>
+							</div>
+							<select class="form-control">
+								<option>Mechanic</option>
+								<option>Electrician</option>
+								<option>CNC Operator/ Mechanic</option>
+								<option>BPO/ Receptionist</option>
+							</select>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<br/>
+								<label for="job role">Experience</label>
+							</div>
+							<select class="form-control">
+								<option> Fresher</option>
+								<option>0-2 Years</option>
+								<option>2-5 Years</option>
+								<option> 5-10 Years</option>
+								<option>10-15 Years</option>
+								<option>15 Years & above</option>
+							</select>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<br/>
+								<label for="job role">Current Address</label>
+							</div>
+							<div style="width:45%; margin:2%; float:left;">
+								<select class="form-control">
+									<option>Rajasthan</option>
+								</select>
+							</div>	
+							<div style="width:45%; margin:2%; float:left;">
+								<select class="form-control">
+									<option>Jaipur</option>
+								</select>
+							</div>	
+							<textarea class="form-control"></textarea>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<br/>
+								<label for="job role" style="float:left">Permanent Address</label>
+								<h5 style="float:right; color:#4A4D4E;"><input type="checkbox" style="background-color:white; height:20px;"> Same as Above</h5>	
+							</div>
+							<div style="width:100%; height:40px; ">
+								
+							</div>
+							<div style="width:45%; margin:2%; float:left;">
+								<select class="form-control">
+									<option>Rajasthan</option>
+								</select>
+							</div>	
+							<div style="width:45%; margin:2%; float:left;">
+								<select class="form-control">
+									<option>Jaipur</option>
+								</select>
+							</div>	
+							<textarea class="form-control"></textarea>
+						</div>
+						<hr/>
+						<center><h4>Work History</h4></center>
+						<div class="col-md-12 form-group" >
+							<br/>
+							<label for="experience">Job Title</label>
+							<div>
+								<input type="text" name="title" placeholder="Senior Electrician" class=" form-control"/>
+							</div>
+						</div>
+						<div class="col-md-12 form-group" >
+							<br/>
+							<label for="experience">Company Name</label>
+							<div>
+								<input type="text" name="company" placeholder="Company Ka Naam" class=" form-control"/>
+							</div>
+						</div>
+						<div class="col-md-12 form-group" >
+							<br/>
+							<label for="experience">Address Of Company</label>
+							<div>
+								<input type="text" name="company_address" placeholder="Company Ka Pata" class=" form-control"/>
+							</div>
+						</div>
+						<div class="col-md-12 form-group" >
+							<br/>
+							<label for="experience">From</label>
+							<div>
+								<input type="month" name="from" placeholder="Company Ka Pata" class=" form-control"/>
+							</div>
+						</div>
+						<div class="col-md-12 form-group" >
+							<br/>
+							<label for="experience">Upto</label>
+							<div>
+								<input type="month" name="to" placeholder="Company Ka Pata" class=" form-control"/>
+							</div>
+						</div>
+						<div class="col-md-12 form-group" >
+							<br/>
+							<label for="experience">Work Description</label>
+							<div>
+								<textarea class="form-control" placeholder="Kaam Ka Byora"></textarea>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<h4><i class="fas fa-plus-circle"></i> Add More Work Experience</h4>
+						</div>
+						<div class="col-md-12">
+							<center><input type="submit" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="CONTINUE" value="CONTINUE"></center>
+						</div>
+					</div>
+				</div>
+			</section>

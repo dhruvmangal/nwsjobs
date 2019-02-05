@@ -1,0 +1,43 @@
+#footer{
+		display:none;
+	}
+
+	
+@media screen and (max-width: 900px) {
+	#header{
+		display:none;
+	}
+	.logo{
+		width:100%;
+		text-align:center;
+		margin-bottom:100px;
+	}
+	#footer{
+		text-align:center;
+		display:block;
+	}
+	.img-logo{
+		width:200px;
+		height:auto;
+	}
+
+	
+	
+}
+@media screen and(min-width: 600px){
+	.img-logo{
+		width:200px;
+		height:auto;
+	}
+	
+	
+	
+}
+
+.img-logo{
+		width:100px;
+		height:auto;
+	}
+	#popups{
+				display:none;
+			}

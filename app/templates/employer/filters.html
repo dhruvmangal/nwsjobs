@@ -1,0 +1,194 @@
+<html>
+	<head>
+		<title>NWC Jobs:Filters</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		<style>
+			#job-method{
+				padding-top:50px;
+				width:100px;
+				height:auto;
+				z-index:1;
+			}
+			#function-sec{
+				padding-top:80px;
+				position:fixed;
+				top:0px;	
+				width:100%;
+				background-color:white;
+				z-index:1;
+			}
+			
+			.main-logo{
+			width:100px;
+			height:auto;}
+			
+			.no-display-desktop{
+					display:none;
+				}
+				
+			#job-function-mob{
+				display:none;
+			}
+			
+			#filter-line{
+				display:none;
+				}	
+				
+			.select_btn{
+				cursor:pointer;
+				background-color:white;
+				color:#4A4D4E;
+				padding:10px;
+				border:1px solid gray;
+				border-radius:5px;
+			}	
+			@media screen and (max-width: 900px) {
+				#header{
+					display:none;
+				}	
+				#job-method{
+					padding-top:0px;
+					position:fixed;
+					width:100%;
+					z-index:1;
+				}
+				#function-sec{padding-top:10px;}
+				#filter{
+					display:none;
+				}
+				#job-description{
+					display:none;
+				}
+				#job-function{
+					display:none;
+				}
+				#job-function-mob{
+				display:none;
+				}
+				.no-display-desktop{
+					display:block;
+					margin-top:50px;
+				}
+				.main-logo{
+					width:70px;
+					height:auto;
+					padding-bottom:10px;
+					}
+					#filter-line{
+						display:block;
+					}
+			
+	
+			}
+
+		</style>
+		<script>
+			$(document).ready(function()
+				{
+					$("#filtera").load("filter.html");
+					
+				}
+			
+			)
+			function login(){
+					var x=  window.matchMedia("(max-width: 700px)")
+					if(x.matches)
+					{
+						window.location.href = "log-mob.html";
+						}
+					else{
+						$("#popup-div").load("log.html");
+						document.getElementById("popup").style.display="block";
+					}
+					
+				}
+
+			
+		</script>
+		</head>
+		<body>
+			<section id="function-sec">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-2">
+							<center><img src="img/logo.png" class="main-logo" style=""  ></center>
+						</div>
+						<div class="col-md-8 col-xs-12" id="job-function">
+							
+							<form>
+								<div style="float:left; margin-left:10px; width:30%;">
+									
+									<label for="jobrole">JOB ROLE</label>
+									<br/>
+									
+									<input type="text" placeholder=" JOB ROLE" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+									
+								</div>
+								<div style="float:left; margin-left:10px; width:30%;">
+									<label for="education">Education</label>
+									<br/>
+									<input type="text" placeholder=" Education" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+									
+								</div>
+								<div style="float:left; margin-left:10px; width:30%;">
+									<label for="education">Location</label>
+									<br/>
+									<input type="text" placeholder=" Location" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+								</div>
+								<div style="padding-top:10px;">
+									<button class="btn" style="margin:15px; background-color:#FF0000; color:white;" ><b>Search Job</b></button>
+									
+								</div>
+							</form>
+							
+						</div>
+						<div class="col-md-2 col-xs-12" >
+							<div style="text-align:center; padding-top:5px;">
+								<button class="btn" style="background-color:white; color:#4A4D4E;border:1px solid gray;" onclick="login()"><b>Login</b></button>
+								<button class="btn" style="color:white; background-color:red;"><b>signup</b></button>
+							</div>
+							
+						</div>
+						
+							
+					</div>
+					
+				</div>
+			</section>
+			<section style="padding-top:170px;">
+				<div class="container-fluid">
+					<div class="row">
+						<div id="filtera">
+							
+						</div>
+					</div>
+				</div>
+			</section>

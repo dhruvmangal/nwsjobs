@@ -1,0 +1,221 @@
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/cs.css">
+		<link rel="stylesheet" href="css/jsm.css">
+		<script src="js/bootstrap.js" type="text/JavaScript"></script>
+		<script src="js/bootstrap.min.js" type="text/JavaScript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="css/main.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/main.js" type="text/JavaScript"></script>
+		<script src="js/anime.js" type="text/JavaScript"></script>
+		<script src="js/anime.min.js" type="text/JavaScript"></script>
+		<style>
+		.dark{	
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
+		}
+		.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+    text-align:center;
+	margin-top:110px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.mobile:focus{
+	outline:none;
+	outline-bottom:1px solid red;
+}
+.mobile::-webkit-input-placeholder{
+	color:black;
+	font-size:14px;
+	vertical-align:0px;
+	margin-left:5px;
+}
+i
+</style>
+	</head>
+	<body id="body">
+		<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Dashboard</a>
+  <hr/>
+  <a href="#">Profile</a>
+  <hr/>
+  <a href="#">Applied Jobs</a>
+  <hr/>
+  <a href="#">Notifications</a>
+  <hr/>
+  <a href="#">Settings</a>
+</div>
+
+		<header style="position:fixed; box-shadow:1px 1px 1px grey; width:100%; height:auto;background-color:#fc1e1e; z-index:1;">
+			<div style="width:100%; height:10px; background-color:#red;">
+			</div>
+			<div class="container-fluid" onscroll="hide-header(this)">
+				<div class="row">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="header">
+								<div style="float:left;">
+									<img src="img/white_logo.png" style="width:50; height:auto; margin-left:40px; margin-top:5px; margin-bottom:5px;"><p style="margin-left:30px;color:white;">NWC Jobs</p>
+								</div>
+								<div style="float:right;margin:10px 20px; " id="nav-bar">
+									<img src="img/close.png" style="width:30px;">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid" style="background-color:#fc1e1e; ">
+				<div class="row">
+					<div class="col-md-12">
+						<h4 style="paddin-left:10px; padding-top:30px; color:white;">Please enter your details to Register</h4>
+					</div>
+			</div>
+		</header>
+		<section id="phone" style="padding-top:200px; display:block; margin:0px 20px;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+						<div id="mobile-label">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:-8px; display:block;">Mobile No.</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="mobile" placeholder="Mobile No." autofocus="autofocus" onfocus="inputfocus(this, 'Mobile No', 'mobile-label')" onblur="inputblur(this, 'Mobile No', 'mobile-label')"></center>
+	
+						</form>	
+							<center><button type="button" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#3b5998; border-radius:0px;" onclick="next('phone', 'otp')" >CONTINUE</button></center>
+							<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px;">Existing User? LOG IN</button></center>
+						
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<section id="otp" style="padding-top:200px; display:none; margin:0px 20px;"> 
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+						<div id="OTP-label">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:-8px; display:block;">OTP</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="otp" placeholder="OTP" maxlength="4" autofocus="autofocus" onfocus="inputfocus(this, 'OTP', 'OTP-label')" onblur="inputblur(this, 'OTP', 'OTP-label')"></center>
+						
+							<center><button type="button" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#3b5998; border-radius:0px;" onclick="next('otp', 'email')" >CONTINUE</button></center>
+						</form>	
+							<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px;">Existing User? LOG IN</button></center>
+						
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<section id="email" style="padding-top:200px; display:none;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<form>
+						<div id="name-label" style="display:none;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Full Name</p>
+						</div>
+							<center><input type="text" required class="mobile" style="border:none; border-bottom:1px solid red; width:100%" name="name" placeholder="Full Name" onfocus="inputfocus(this, 'Full Name', 'name-label')" onblur="inputblur(this, 'Full Name', 'name-label')"></center>
+						
+						<div id="password-label" style="display:none; margin-top:10px;">
+							<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:0px; display:block;">Password</p>
+						</div>
+							<center><input type="password" required class="mobile" style=" text-indent:18px;border:none; border-bottom:1px solid red; width:100%; margin-top:20px;" name="password" placeholder="Password" onfocus="inputfocus(this, '  Password', 'password-label')" onblur="inputblur(this, '  Password', 'password-label')"></center>
+								<center><button class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:#3b5998; border-radius:0px;" onclick="next('phone', 'otp')" >CONTINUE</button></center>
+						
+						</form>	
+							<center><button class="btn" style="color:red; width:100%; border:1px solid #e6e6e6; font-size:14px; margin-top:25px; background-color:white; border-radius:0px;">Existing User? SIGN IN</button></center>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>
+			function next(x,y)
+			{
+				document.getElementById(x).style.display="none";
+				document.getElementById(y).style.display="block";
+			}
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+			
+		</script>

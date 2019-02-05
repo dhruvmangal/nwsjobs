@@ -1,0 +1,244 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			@media screen and (max-width: 900px) {
+				#logo{
+					text-align:center;
+				}
+			}
+		</style>
+		<script>
+		function show_popup()
+		{
+			document.getElementById("popup").style.display="block";
+		}
+		</script>
+	</head>
+	<body>
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+					<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+						<div style="float:right; margin:20px;">
+							<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+						</div>
+						<div id="popup-div">
+								<section id="div-form" style=" margin-right:20px; ">
+					
+										<div class="container-fluid" style="">
+											
+											<div class="row">
+												<div class="col-md-4" style="background-color:#4A4D4E; height:500px; margin-bottom:-200px;">
+														<center><h2 style="color:white; font-family:poppins; margin-top:200px;">Create Event</h2></center>
+												</div>
+												<div class="col-md-8 col-xs-12" style="padding:0px 20px;">
+													<form method="post" action="../eventForm/">
+														{% csrf_token%}
+													<div style="height:30px; width:100%;">	
+														<div id="mobile-label">
+															<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Event Name</p>
+														</div>		
+													</div>
+													
+														<center><input type="text" required class="mobile form-control" name="event_name"  autofocus="autofocus" ></center>
+													<div style="height:30px; width:100%;">	
+														<div id="mobile-label">
+															<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Event Venue</p>
+														</div>		
+													</div>
+															
+													<center><input type="text" required class="mobile form-control" name="event_venue"  autofocus="autofocus" ></center>
+													
+													<div style="height:30px; width:100%;">	
+															<div id="mobile-label">
+																<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Event Start Date</p>
+															</div>		
+														</div>
+																
+														<center><input type="date" required class="mobile form-control" name="event_start_date"  autofocus="autofocus" ></center>
+														<div style="height:30px; width:100%;">	
+																<div id="mobile-label">
+																	<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Event end date</p>
+																</div>		
+															</div>
+																	
+															<center><input type="date" required class="mobile form-control" name="event_end_date"  autofocus="autofocus" ></center>
+															
+															<div style="height:30px; width:100%;">	
+																	<div id="mobile-label">
+																		<p  style="font-size:12px; font-family:poppins; color:black; margin-bottom:20px; display:block;">Event description</p>
+																	</div>		
+																</div>
+																		
+																<center><textarea required class="mobile form-control" name="event_description"  autofocus="autofocus" ></textarea></center>
+																
+															
+														<center><input type="submit" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="CREATE" value="create"></center>
+													</form>
+														
+												</div>
+												
+											</div>
+										</div>
+									</section>
+							
+						</div>
+					</div>	
+				</div>
+		<header style="width:100%;">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12" id="logo">
+						<img src="{% static 'img/logo.png'%}" style="width:80px; height:auto;margin:10px;"/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section style="padding-top:150px;">
+		</section>
+		{% if college%}
+		{% for co in college%}
+		<section  style=" box-shadow:1px 1px 2px #D1D1D1;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8  col-xs-12">
+						<h3 style="floa">{{co.college_name}}</h3>
+						
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<button class="btn" onclick="show_popup()" style="background-color:red; color:white; font-size:25px; margin-top:10px;">Create an Event</button>
+						
+					</div>
+				</div>
+				<hr/>
+				<div class="row">
+					<div class="col-md-8 col-xs-12">
+						<h4><b>Contact Person Name</b>: <span style="color:gray;">Mr. Shyoraj ji</span></h4> 
+						<h4><b>Contact Details</b>: <span style="color:gray;">{{request.session.college_phone}}</span></h4>
+						<h4><b>College mail ID</b>: <span style="color:gray;">{{co.email}}</span></h4>
+						<h4><b>Address</b>: <span style="color:gray;">1/56,Malviya Nagar, Jaipur</span></h4>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<center><img src="{% static 'img/sunset.jpg'%}" style="width:300px; height:auto; margin-right:50px;"/></center>	
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<h3>About College</h3>
+					</div>
+					<div class="col-md-12  col-xs-12">
+						dfghjkl;lkjhgfdsdfghjkl;kjhgfdfghjkl;kjhgfdfghjkl;'lkjhgfdsfghjkl;lkjgfdflkjhgfghjk.,mnbvcgdyhhjgikfcbwiefeijwgnrkwi
+					</div>
+					
+				</div>
+			
+			<br/>
+			<br/>
+			
+			</div>
+			<br/>
+		</section>
+		{% endfor %}
+		{% endif%}
+		<section  style=" box-shadow:1px 1px 2px #D1D1D1; margin-top:50px;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-xs-4">
+						<h3>Trades</h3>
+						
+					</div>
+					
+				</div>
+				<hr/>
+				<div class="row">
+					<div class="col-md-4 col-xs-4">
+						<h5><b>Batch</b></h5>
+						
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<h5><b>Trade Name</b></h5>
+						
+					</div>
+					
+					<div class="col-md-4 col-xs-4">
+						<h5><b>No. of Candidates</b></h5>
+						
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-xs-4">
+						<h5><i>2016-2017</i></h5>
+						
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<h5><i>Mechanical</i></h5>
+						
+					</div>
+					
+					<div class="col-md-4 col-xs-4">
+						<h5><i>12</i></h5>
+						
+					</div>
+						
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-xs-4">
+						
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<h5><i>Mechanical</i></h5>
+						
+					</div>
+					
+					<div class="col-md-4 col-xs-4">
+						<h5><i>12</i></h5>
+						
+					</div>
+						
+				</div>
+				
+				<div class="row">
+					<div class="col-md-4 col-xs-4">
+						
+					</div>
+					<div class="col-md-4 col-xs-4">
+						<h5><i>Mechanical</i></h5>
+						
+					</div>
+					
+					<div class="col-md-4 col-xs-4">
+						<h5><i>12</i></h5>
+						
+					</div>
+						
+				</div>
+				
+							<br/>
+		</section>
+			

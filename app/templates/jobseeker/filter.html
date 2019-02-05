@@ -1,0 +1,130 @@
+
+<div id="filter-div">
+	<div>
+	<center><h4 class="" style="color:black;"><b>Search Job by</b></h4></center>
+	<hr/>
+</div>
+<form>
+<div class="filter-category">
+	
+		<center>
+		
+		<input type="text"  id="job_role_ab" placeholder="job_role" class="form-control" onclick="category()" style="width:100%;"/>
+	</center>
+</div>
+<hr/>
+<div class="filter-category">
+	<center>
+		<input type="text" placeholder="Skills" class="form-control" onclick="skills()" style="width:100%;"/>
+	</center>
+</div>
+<hr/>
+
+<div class="filter-category">
+	<center>
+		
+		<input type="text" placeholder="Location" class="form-control" id="location_12" onclick="location()" style="width:100%;"/>
+	</center>
+</div>
+<hr/>
+<div class="filter-category">
+	<center>
+		<input type="text" placeholder="Education" class="form-control" onclick="category()" style="width:100%;"/>
+	</center>
+</div>
+<hr/>
+<div class="filter-category">
+	<h4>Salary</h4>
+	<div class="filter-radio">
+		<input type="hidden" name="salary_range" id="salary_range" value="none"/>
+		<h5 class="select_btn" onclick="salary_select(this, 'range1')" id="range1"> ₹5000 to ₹9000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range2')" id="range2"> ₹9000 to ₹15000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range3')" id="range3"> ₹15000 to ₹20000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range4')" id="range4"> ₹20000 to ₹27000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range5')" id="range5"> ₹27000 to ₹35000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range6')" id="range6"> ₹35000 to ₹42000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range7')" id="range7"> ₹42000 to ₹55000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range8')" id="range8"> ₹55000 to ₹70000</h5>
+		<h5 class="select_btn" onclick="salary_select(this, 'range9')" id="range9"> Above ₹70000</h5>
+<!--		<input type="checkbox" name="10000" value="10000"> Rs 5000 - Rs 9000<br/>
+		<input type="checkbox" name="salary" value="20000"> Rs 9000 - Rs 15000<br/>
+		<input type="checkbox" name="gender" value="woman"> Rs 15000 - Rs 20000<br/>
+		<input type="checkbox" name="gender" value="woman"> Rs 20000 - Rs 27000<br/>
+		<input type="checkbox" name="gender" value="woman"> Rs 27000 - Rs 35000<br/>
+		<input type="checkbox" name="gender" value="woman"> Rs 35000 - Rs 42000<br/>
+		<input type="checkbox" name="gender" value="woman"> Rs 42000 - Rs 55000<br/>
+		<input type="checkbox" name="gender" value="woman"> Rs 55000 - Rs 70000<br/>
+		<input type="checkbox" name="gender" value="woman"> Above Rs 70000 <br/><br/>-->
+	</div>
+</div>
+<hr/>
+<div class="filter-category">
+	<h4>Experience</h4>
+	<div class="filter-radio">
+		<input type="hidden" name="exp" value="none" id="exp"/>
+		<h5 class="select_btn" onclick="select_exp(this, 'exp1')" id="exp1"> Fresher</h5>
+		<h5 class="select_btn" onclick="select_exp(this, 'exp2')" id="exp2"> 0-2 Years</h5>
+		<h5 class="select_btn" onclick="select_exp(this, 'exp3')" id="exp3"> 2-5 Years</h5>
+		<h5 class="select_btn" onclick="select_exp(this, 'exp4')" id="exp4"> 5-10 Years</h5>
+		<h5 class="select_btn" onclick="select_exp(this, 'exp5')" id="exp5"> 10-15 Years</h5>
+		<h5 class="select_btn" onclick="select_exp(this, 'exp6')" id="exp6"> 15 Years & above</h5>
+	</div>
+</div>
+<hr/>
+<div class="filter-category">
+	<center><button class="btn" style="background-color:red; color:white;"> Apply Filters</button></center>
+</div>
+<hr/>
+<div class="filter-category">
+	<center><p style="color:#4a4d4e;"><u><b>Advance  Filters</b></u></p></center>
+</div>
+
+<!--<div class="filter-category">
+	<p class="fil">&times; clear</p>
+</div>-->	
+
+
+</form>
+</div>
+
+<script>
+	function salary_select(v, val)
+	{
+		var x= document.getElementById('salary_range').value;
+		v.style.backgroundColor= 'red';
+		v.style.color= 'white';
+		if(x== 'none')
+		{
+		document.getElementById('salary_range').value=val;
+		x=document.getElementById('salary_range').value;
+		
+		
+		}
+		else{
+			document.getElementById(x).style.backgroundColor="white";
+			document.getElementById(x).style.color= "#4A4D4E";
+			document.getElementById('salary_range').value=val;
+			
+		}
+	}
+	function select_exp(v, val)
+	{
+		var x= document.getElementById('exp').value;
+		v.style.backgroundColor= 'red';
+		v.style.color= 'white';
+		if(x== 'none')
+		{
+		document.getElementById('exp').value=val;
+		x=document.getElementById('exp').value;
+		
+		
+		}
+		else{
+			document.getElementById(x).style.backgroundColor="white";
+			document.getElementById(x).style.color= "#4A4D4E";
+			document.getElementById('exp').value=val;
+			
+		}
+	}
+</script>
+

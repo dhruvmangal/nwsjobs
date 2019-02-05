@@ -1,0 +1,420 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			#job-method{
+				padding-top:50px;
+				width:100px;
+				height:auto;
+				z-index:1;
+			}
+			#function-sec{
+				padding-top:80px;
+				position:fixed;
+				top:0px;	
+				width:100%;
+				background-color:white;
+				z-index:1;
+			}
+			
+			.main-logo{
+			width:100px;
+			height:auto;}
+			
+			.no-display-desktop{
+					display:none;
+				}
+				
+			#job-function-mob{
+				display:none;
+			}
+			
+			#filter-line{
+				display:none;
+				}	
+				
+			.select_btn{
+				cursor:pointer;
+				background-color:white;
+				color:#4A4D4E;
+				padding:15PX;
+				border:1px solid gray;
+				border-radius:5px;
+				
+			}	
+			@media screen and (max-width: 900px) {
+				#header{
+					display:none;
+				}	
+				#job-method{
+					padding-top:0px;
+					position:fixed;
+					width:100%;
+					z-index:1;
+				}
+				#function-sec{padding-top:15PX;}
+				#filter{
+					display:none;
+				}
+				#job-description{
+					display:none;
+				}
+				#job-function{
+					display:none;
+				}
+				#job-function-mob{
+				display:block;
+				}
+				.no-display-desktop{
+					display:block;
+					margin-top:50px;
+				}
+				.main-logo{
+					width:70px;
+					height:auto;
+					padding-bottom:15PX;
+					}
+					#filter-line{
+						display:block;
+					}
+			
+	
+			}
+
+		</style>
+		<script>
+				function fill_background(x,y)
+				{
+					var t= document.getElementById(y).style.color;
+					alert(t);
+					if(t== 'white')
+					{
+						document.getElementById(y).style.color="black";
+						x.style.backgroundColor="#white";
+					}
+					if(t== 'black')
+					{
+						document.getElementById(y).style.color="white";
+						x.style.backgroundColor="#4A4D4E";
+					}
+				}
+		
+		
+		</script>
+		<body>
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:15PX; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+					</div>
+				</div>	
+			</div>
+			<header style="z-index:2;" id="header">
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							<div class="fleft">
+								<h5 style="color:white;color:white;border:none; border-radius:5px; padding:5px;">Mitra</h5>
+								
+							</div>
+							<div class="fleft">
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">College</h5>
+								
+							</div>
+							<div class="fleft" >
+								<h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;" class="nonne">Employer</h5>
+								
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:15PX;"><img src="img/whatsapp.png" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<section style="padding-top:120px;">
+				<div class="container-fluid">
+					<div class="row">
+						<center><h3>Choose Your Language</h3></center>
+					</div>
+					<div class="row">
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4 col-xs-12" style="padding:15PX 20px;">
+						<form method="POST" action="../user_details3/">
+							{% csrf_token %}
+								
+							<input type="hidden" name="language"/>
+							<div style="width:100%; padding-bottom:15PX; height:auto; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center; ">
+									<h4 >English:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15px; margin:0px 15px; color:black;" onclick="fill_background(this, 'speak_english')">
+									<h5 id="speak_english">	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15px; margin:0px 15px; color:black;"  onclick="fill_background(this)">
+									<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Hindi:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15px; margin:0px 15px;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15px; margin:0px 15px;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Urdu:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Punjabi:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Oriya:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Bengali:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Telugu:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Assamme:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Marathi:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Tamil:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Gujarati:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Kannada:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+							<br/>
+							<br/>
+							<br/>
+							<div style="width:100%; margin:15PX;">
+								<div style="float:left; width:35%; text-align:center;">
+									<h4 >Malyalam:</h4>
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Speak</h5>	
+								</div>
+								<div style="float:left; border:1px solid #4A4D4E; border-radius:5px;text-align:center; padding:5px 15PX; margin:0px 15PX;">
+								<h5>	Write</h5>	
+								</div>
+							</div>
+						
+						
+						
+						
+						
+							<center><input type="submit" class="btn" style="color:white; width:100%; border:none; font-size:18px; margin-top:25px; background-color:red; border-radius:0px; box-shadow: 1px 1px 3px gray;" name="CONTINUE" value="CONTINUE"></center>
+						</form>
+							
+						
+					</div>
+					<div class="col-md-4">
+					</div>
+					
+				</div>
+				</div>
+			</section>
+			
+					<script>
+			function inputfocus(x, y, z)
+			{
+				x.placeholder=" ";
+				document.getElementById(z).style.display= "block";
+			}
+			function inputblur(x,y,z)
+			{
+				x.placeholder=y;
+				document.getElementById(z).style.display="none";
+				if(x.value != '')
+				{
+					document.getElementById(z).style.display="block";
+				}
+			}
+			function show_forget()
+			{
+				var x= document.getElementByClass('mobile');
+				if(x.value != '')
+				{
+					document.getElementById('forget-label').style.display="block";
+					document.getElementById('mobile-label').style.display="none";
+				}
+			}
+			function change_border(x, gen)
+			{
+				var y= document.getElementById("gender").value;
+				if(y=='null')
+				{
+					document.getElementById("gender").value= gen;
+					document.getElementById(x).style.backgroundColor= "#4A4D4E";
+					document.getElementById(x).style.color='white';
+				}
+				else{
+					document.getElementById("gender").value= gen;
+					document.getElementById(y).style.backgroundColor="white";
+					document.getElementById(y).style.color= 'black';
+					
+					document.getElementById(x).style.backgroundColor= "#4A4D4E";
+					document.getElementById(x).style.color='white';
+				}	
+			}
+		</script>

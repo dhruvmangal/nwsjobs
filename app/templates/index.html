@@ -1,0 +1,145 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<link rel="stylesheet" href="{% static 'css/index.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="{% static 'js/index.js'%}" type="text/JavaScript"></script>
+		<script>
+			
+			function clear_screen()
+			{
+				document.getElementById("popups").style.display="none";
+				document.getElementById("body").style.position="static";
+				search_btn();
+			}
+		</script>
+		<style>
+			#popups{
+					display:none;
+				}
+			@media screen and (max-width: 900px){
+				#popups{
+					display:block;
+				}
+			}
+		</style>
+		</head>
+		<body id="body" style="position:fixed; width:100%;">
+			<div id="popup" style="position:fixed; display:none; top:100px; left:350px; width:50%;height:70%; background-color:white; z-index:2;border:1px solid red;border-radius:10px;">
+				<div style="float:right; margin:20px;">
+					<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+				</div>
+				<div id="popup-div">
+				</div>
+			</div>
+			<div id="popups" style="position:fixed;top:0px;width:100%; height:100%;background-color:rgba(74, 77, 78, 0.1); z-index:1;">
+				<div style="padding-top:360px;padding-right:50px; float:right" onclick="clear_screen()">
+					<b>Click here</b> 
+				</div>
+			</div>
+			<header style="z-index:2;" id="header">
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							<div class="fleft">
+								<h5 style="color:white;color:white;border:none; border-radius:5px; padding:5px;">Mitra</h5>
+								
+							</div>
+							<div class="fleft">
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">College</h5>
+								
+							</div>
+							<div class="fleft" >
+								<h5 style="color:white;border:none; border-radius:5px; padding:5px;">Partner</h5>
+								
+								
+							</div>
+							
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:10px;"><img src="img/whatsapp.png" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+							<div class="fright">
+								<a href="candidates/"><h5 style="border:none; border-radius:5px; background-color:red; padding:10px; color:white;" class="nonne">Firm / Business</h5></a>
+							</div>
+								
+						</div>
+					</div>
+				</div>
+			</header>
+			<section style="padding-top:50px;">
+				<div class="col-md-12" id="mid-header">
+					<div class="logo">
+						<a href=""><img src="{% static 'img/logo.png'%}" class="img-logo" ></a>
+						
+					</div>
+							
+					<div class="search" style="width:100%; margin-top:-130px;">
+						<center><h4><button style="color:white; background-color:red; border-radius:0px; font-size:15px;" class="btn">Hindi</button><button style="color:white; background-color:#4a4d4e; font-size:15px;border-radius:0px;" class="btn">English</span></h4></center>
+					</div>								
+				</div>
+			</section>
+			<section style="margin-top:100px;">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-4">
+						</div>
+						<div class="col-md-4 col-xs-12" style="text-align:center;">
+							<h2><b>Search?</b></h2>
+							<br/>
+							<a href="jobs/"><button style="margin-top:-10px; color: #4a4d4e; background-color:white;border:1px solid #4a4d4e; width:100%;display:none; font-size:20px;" class="btn" onclick="change_color(this)" id="search_jobs">Find Job </button></a>
+							<input type="text" placeholder="Search" class="form-control"id="search_btn" onclick="search_btn(this)" style="height:45px;"/>
+							<a href="candidates/"><button style="margin-top:10px; color: red; background-color:white;border:1px solid red; width:100%;display:none; font-size:20px;"  class="btn" id="search_candidates">Find Candidates </button></a>
+						</div>
+						<div class="col-md-4">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section style="padding-top:250px;">
+				<div style="widh:100%;" >
+					<center><p style="font-size:13px;"><a href="#" style="color:#4a4d4e;"><b>Find Jobs Fast <span style="color:red;">"Create Profile"</span> NOW</b></a></p></center>
+					<center><p style="font-size:13px;"><a href="#" style="color:#4a4d4e;"><b>Hire Professional Candidates <span style="color:red;">"Post Job"</span> NOW</b></a></p></center>
+				</div>
+			</section>
+			<section id="footer" style="margin-top:100px;">
+				<div class="container-fluid">
+					<div class="row">
+						<br/>
+						<div class="col-md-12" style="text-align:center;">
+							<center><p style="font-size:13px;"><a href="#" style="color:#4a4d4e;"><b>Mitra <span style="color:red;">"Login Here"</span> </b></a></p></center>
+							<center><p style="font-size:13px;"><a href="#" style="color:#4a4d4e;"><b>College <span style="color:red;">"Login here"</span> </b></a></p></center>
+							<center><p style="font-size:13px;"><a href="#" style="color:#4a4d4e;"><b>Employer <span style="color:red;">"Login here"</span></b></a></p></center>
+							<center><p style="font-size:13px;"><a href="#" style="color:#4a4d4e;"><b>Partner <span style="color:red;">"Login here"</span> NOW</b></a></p></center>
+						</div>
+					</div>
+				</div>
+			</section>

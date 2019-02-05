@@ -1,0 +1,396 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			var states= ['Andhra Pradesh',
+			'Arunachal Pradesh',
+			'Assam',
+			'Bihar',
+			'Chhattisgarh',
+			'Goa',
+			'Gujarat',
+			'Haryana',
+			'Himachal Pradesh',
+			'Jammu and Kashmir',
+			'Jharkhand',
+			'Karnataka',
+			'Kerala',
+			'Madhya Pradesh',
+			'Maharashtra',
+			'Manipur',
+			'Meghalaya',
+			'Mizoram',
+			'Nagaland',
+			'Odisha',
+			'Punjab',
+			'Rajasthan',
+			'Sikkim',
+			'	Tamil Nadu',
+			'Telangana',
+			'Tripura',
+			'Uttar Pradesh',
+			'Uttarakhand',
+			'	West Bengal',
+			'Andaman and Nicobar Islands',
+			'	Chandigarh',
+			'Dadra and Nagar Haveli',
+			'Daman and Diu',
+			'Delhi',
+			'Lakshadweep',
+			'Pondicherry']
+		</script>
+		<style>
+				#job-method{
+					padding-top:50px;
+					width:100px;
+					height:auto;
+					z-index:1;
+				}
+				#function-sec{
+					padding-top:80px;
+					position:fixed;
+					top:0px;	
+					width:100%;
+					background-color:white;
+					z-index:1;
+				}
+				
+				.main-logo{
+				width:100px;
+				height:auto;}
+				
+				.no-display-desktop{
+						display:none;
+					}
+					
+				#job-function-mob{
+					display:none;
+				}
+				
+				#filter-line{
+					display:none;
+					}	
+				@media screen and (max-width: 900px) {
+					#header{
+						display:none;
+					}	
+					#job-method{
+						padding-top:0px;
+						position:fixed;
+						width:100%;
+						z-index:1;
+					}
+					#function-sec{padding-top:10px;}
+					#filter{
+						display:none;
+					}
+					#job-description{
+						display:none;
+					}
+					#job-function{
+						display:none;
+					}
+					#job-function-mob{
+					display:none;
+					}
+					.no-display-desktop{
+						display:block;
+						margin-top:50px;
+					}
+					.main-logo{
+						width:70px;
+						height:auto;
+						padding-bottom:10px;
+						}
+						#filter-line{
+							display:block;
+						}
+				
+		
+				}
+	
+			</style>
+			<script>
+				
+			 
+				function login(){
+						var x=  window.matchMedia("(max-width: 700px)")
+						if(x.matches)
+						{
+							window.location.href = "../login/";
+							}
+						else{
+							$("#popup-div").load("log.html");
+							document.getElementById("popup").style.display="block";
+						}
+						
+					}
+					
+				function skills()
+					{
+						$("#popup-div").load("skills.html");
+						document.getElementById("popup").style.display="block";
+						
+					}	
+				function go_back(){
+					window.location.href = "../";
+					}	
+					function callOrWhatsapp()
+					{
+						document.getElementById('popups').style.display= "block";
+					}
+					function close_callOrWhatsapp()
+					{
+						document.getElementById('popups').style.display= "none";
+					}
+					function show_unavaibility()
+					{
+						window.location.href="tel:"+{{job.job_contact}}
+					}
+			</script>
+			</head>
+			<body>
+				<div id="popups" style="position:fixed; top:0; display:none; right:0;width:100%; height:100%; background-color:rgba(74, 77, 78, 0.4); z-index:2;" onclick="close_callOrWhatsapp()">
+					<div style="float:right; margin-right:20px; margin-top:20px; ">
+						<h1 style="color:black;">&times;</h1>
+					</div>
+					<div style="width:100%;padding-top:250px;">	
+						<a href="https://api.whatsapp.com/send?phone=+91-7023336651&text=Hi, I am looking for a Job."><div style="float:left;  margin:5px;width:45%;background-color:white; color:black; border:1px solid gray; border-radius:10px; text-align:center; height:150px;">
+							<img src="{% static 'img/whatsapp.png'%}" style="height:80px; width:auto;"/>
+							<h3> Whatsapp</h3>
+						</div></a>
+				
+						<a href="tel:+91-7023336651"><div style="float:left; margin:5px; width:45%;color:white; background-color:red; border-radius:10px; text-align:center;height:150px;">
+							<i class="fas fa-phone-volume" style="font-size:60px; color:white; margin-top:15px;"></i>
+							<h3 style="color:white;">Call</h3>
+							</a>
+						</div>
+					</div>	
+				</div>
+				<section id="function-sec">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-xs-4">
+								<p style="font-size:15px; color:black; margin-top:4px;" onclick="go_back()"><b><i class="fas fa-arrow-left"></i> Back</b></p>
+							</div>
+							
+							<div class="col-xs-8">
+								<p style="color:black; padding-right:10px; float:right" id="callOrWhatsapp"  onclick="callOrWhatsapp()"><span style="color:green; margin-top:10px;" onclick="callOrWhatsapp()"><img src="{% static 'img/whatsapp.png'%}" style="height:30px; width:auto;"/></span> +91-7023336651
+								<br/><span style="font-size:10px; text-align:center; padding-left:50px; "><b>HELLO</b>, NWCJOBS</span>	</p>
+								<br/>
+								<br/><p style=" float:right;"></p>
+							</div>
+							
+							<div style="margin-left:15px;" style=" float:left;">
+								
+								
+							</div>
+							<div class="float:right;">
+								
+							</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-md-2">
+								<center><img src="{% static 'img/logo.png' %}" class="main-logo" style=""  ></center>
+								
+							</div>
+							<div class="col-md-8 col-xs-12" id="job-function">
+								
+								<form>
+									<div style="float:left; margin-left:10px; width:30%;">
+										
+										<label for="jobrole">JOB ROLE</label>
+										<br/>
+										
+										<input type="text" placeholder=" JOB ROLE" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+										
+									</div>
+									<div style="float:left; margin-left:10px; width:30%;">
+										<label for="education">Education</label>
+										<br/>
+										<input type="text" placeholder=" Education" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+										
+									</div>
+									<div style="float:left; margin-left:10px; width:30%;">
+										<label for="education">Location</label>
+										<br/>
+										<input type="text" placeholder=" Location" style="width:100%; border-radius:5%; border:2px solid gray; height:30px;"/>
+									</div>
+									<div style="padding-top:10px;">
+										<button class="btn" style="margin:15px; background-color:#FF0000; color:white;" ><b>Search Job</b></button>
+										
+									</div>
+								</form>
+								
+							</div>
+							<div class="col-md-2 col-xs-12" >
+								<div style="text-align:center; padding-top:5px;">
+									<button class="btn" style="background-color:white; color:#4A4D4E;border:1px solid gray;" onclick="login()"><b>Login</b></button>
+									<button class="btn" style="color:white; background-color:red;"><b>signup</b></button>
+								</div>
+								
+							</div>
+							
+								
+						</div>
+						
+					</div>
+				</section>
+				<div style="width:100%; height:180px;">
+
+				</div>
+<div style="background-color:white;">
+	<center><h4 style="color:#4a4d4e;">Choose Your Location</h4></center>
+	<script>
+		var i;
+		for( i=0; i<states.length; i++)
+		{
+			var col_start= "<div class='col-md-6 col-xs-6'>";
+			var col_end= "</div>"
+			var row_start= "<div class='row'>";
+		
+			var text='<a href="../jobs/?location='+ states[i]+'"><h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;" >'+states[i]+"</h5></a>";
+			var text= col_start+text+col_end;
+			if(i%2==0)
+			{
+				var text= row_start+text;
+			}
+			else
+			{
+				var text= text+col_end;
+			}
+			document.write(text);
+			$(states[i]).click(function(){
+				select_location(state[i]);
+			});
+		}
+		
+		function select_location(x)
+			{
+				alert(x)
+			}
+	</script>
+	<script>
+			
+		</script>
+		
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:10px; color:red; cursor:pointer;" onclick="document.getElementById('location_12').value=states[0];" >Andhra Pradesh</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[1];" >Arunachal Pradesh</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[2];" >Assam</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[3];" >Bihar</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[4];" >Chhattisgarh</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[5];" >Goa</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[6];" >Gujarat</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[7];" >Haryana</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[8];" >Himachal Pradesh</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[9];" >Jammu and Kashmir</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;" onclick="document.getElementById('location_12').value=states[10];" >Jharkhand</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[11];" >Karnataka</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[12];" >Kerala</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[13];" >Madhya Pradesh</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[14];" >Maharashtra</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[15];" >Manipur</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[16];" >Meghalaya</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[17];" >Mizoram</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[18];" >Nagaland</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[19];" >Odisha</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[20];" >Panjab</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[21];" >Rajasthan</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[22];" >Sikkim</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[23];" >Tamil Nadu</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[24];" >Telangana</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[25];" >Tripura</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[26];" >Uttar Pradesh</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[27];" >Uttarakhand</h5>
+			</div>
+			<div class="col-md-4 col-xs-6 " >
+				<h5 style="border:none; border-radius:5px; background-color:white; padding:5px; color:red; cursor:pointer;"  onclick="document.getElementById('location_12').value=states[28];" >West Bengal</h5>
+			</div>
+		</div>
+	</div>
+-->
+</div>
+

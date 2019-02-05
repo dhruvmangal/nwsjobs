@@ -1,0 +1,195 @@
+{% load static %}
+<html>
+	<head>
+		<title>NWC Jobs:Home</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+		<link rel="stylesheet" href="{% static 'css/cs.css'%}">
+		<link rel="stylesheet" href="{% static 'css/style.css'%}">
+		<script src="{% static 'js/bootstrap.js'%}" type="text/JavaScript"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/JavaScript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		
+		<body>
+			<div id="popup" style="position:fixed; display:none; top:0px; left:0px; width:100%;height:100%; background-color:rgba(74, 77, 78, 0.6);; z-index:2; " >
+				<div id="pop-up" style="border:1px solid gray;border-radius:10px; height:auto;min-height:500px; width:50%; margin-top:100px; margin-left:25%;background-color:white; opacity:1; padding-bottom:30px;">
+					<div style="float:right; margin:20px;">
+						<p style="cursor:pointer;" onclick="close_div()">&times;</p>
+					</div>
+					<div id="popup-div">
+					</div>
+				</div>	
+			</div>
+			<header>
+				
+				<div class="container-fluid">
+					<div class="row" >
+						<!--<div class="col-md-12" id="upper-header">	
+						</div>-->
+						<div class="col-md-12" id="upper-middle"style="background-color:#4a4d4e; ">
+							
+							<div class="fleft" >
+								<h6 style="margin-top:-3px; color:white;">Looking for a job</h6>
+								<a href="../jobs/"><h5 style="border:none; border-radius:5px; background-color:red; padding:5px; color:white;text-align:center;">Click Here</h5></a>
+								
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><i class="fas fa-envelope" style="font-size:20px;"></i> info@nwcjobs.com</h5>
+							</div>
+							<div class="fright">
+								<h5 style="color:white; padding-right:60px;"><span style="color:green; margin-top:10px;"><img src="{% static 'img/whatsapp.png'%}" style="height:30px; width:auto;"/></span> +91 -702 333 6651</h5>
+							</div>
+								
+						</div>
+						
+						
+						
+					</div>
+				</div>
+			</header>
+			<div style=" padding-top:80px;">
+			</div>
+			<section style="margin-bottom:30px;">
+				<div class="container-fluid">
+					<div class="row">
+						<center><img src="{% static 'img/call_now.png'%}"style="width:200px;" alt="call" /></center>
+						<center><p>now, post a job on a call</p></center>
+					</div>
+				</div>
+			</section>
+			<section style="height:550px; background-color:white;	">
+				<div class="container-fluid">
+					<div class="row">
+						
+						<div style="width:8%; height:100%; float:left; ">
+						</div>
+						<div style="width:15%; height:100%; float:left; border:1px solid fbfbfb; margin:0px 10px; box-shadow:1px 1px 2px;background-color:white; padding:-20px 0px;	" onclick="highlight(this)">	
+							<div>
+								<center><h4 style="color:red;">Quick Job Post</h4></center>
+							</div>
+							
+							<div style="width:100%; height:50px; background-color:#46C19F; ">
+								<center><p style="font-size:22px; padding-top:20px; color:white;"><b>Rs 3,000</b></p></center>
+							</div>
+							
+							<div >
+								<center><h5 style="color:gray;"><b>No. of Job Posted:</b></h5></center>
+								
+								<center><h4 style="padding:10px 0px;">105 Jobs</h4></center>
+							</div>
+							<div >
+								<center><h5 style="color:gray;"><b>Database Access:</b></h5></center>
+								
+								<center><h4 style="padding:10px 0px;">105 Resume</h4></center>
+							</div>
+							<div >
+								<center><h5 style="color:gray;"><b>Validity:</b></h5></center>
+								
+								<center><h4 style="padding:10px 0px;">28 Days</h4></center>
+							</div>
+							<br/>
+							<div >
+								<center><button class="btn" style="width:80%; font-size:18px; background-color:red; color:white;" onclick="qjp()">BUY NOW</button></center>
+							</div>
+							<center><p style="margin-top:25px; color:black; font-family:verdana;">*Registration Not Required</p></center>
+						</div>
+					
+			
+						<div style="width:50%; height:110%; float:left; box-shadow:1px 1px 2px; ">
+							<div style="width:100% float:left;">
+								<center><h4 style="color:red;">Register and Choose </h4></center>
+							</div>
+
+							{% if obj%}
+							{%for i in obj%}
+							<div style="width:30%; height:90%;float:left; border:1px solid fbfbfb; margin:0px 10px; box-shadow:1px 1px 2px;background-color:white; padding:-20px 0px;	" onclick="highlight(this,'{{i.plan_name}}')" id="{{i.plan_name}}">
+							<center><h4>{{i.plan_name}}</h4></center>
+							
+							<div style="width:100%; height:50px; background-color:#46C19F; ">
+								<center><p style="font-size:22px; padding-top:20px; color:white;"><b>Rs {{i.plan_price}}</b></p></center>
+							</div>
+							
+							<div >
+								<center><h5 style="color:gray;"><b>No. of Job Posted:</b></h5></center>
+								
+								<center><h4 style="padding:10px 0px;">{{i.plan_total_jobs}} Jobs</h4></center>
+							</div>
+							<div >
+								<center><h5 style="color:gray;"><b>Database Access:</b></h5></center>
+								
+								<center><h4 style="padding:10px 0px;">{{i.plan_db_access}} Resume</h4></center>
+							</div>
+							<div >
+								<center><h5 style="color:gray;"><b>Validity:</b></h5></center>
+								
+								<center><h4 style="padding:10px 0px;">{{i.plan_validity_starts}} to {{i.plan_validity_ends}}</h4></center>
+							</div>
+							<br/>
+							<div >
+								<center><button class="btn" style="width:80%; font-size:18px; background-color:red; color:white;" onclick="qjp()">BUY NOW</button></center>
+							</div>
+							</div>
+							{% endfor %}
+							{% endif%}
+							
+							
+							
+							
+						</div >
+						
+						<div style="width:15%; height:110%; float:left; border:1px solid fbfbfb; margin:0px 10px; box-shadow:1px 1px 2px;background-color:white; padding:-20px 0px;	" onclick="highlight(this)">	
+							<div>
+								<center><h4 style="color:red;"> For Customized Plan</h4></center>
+							</div>
+							<center><h4>Munafa</h4></center>
+							
+							<div style="width:100%; height:50px; background-color:#46C19F; ">
+								<center><p style="font-size:22px; padding-top:20px; color:white;"><b>Contact Us</b></p></center>
+							</div>
+							
+							<form>
+								<br/>
+								<br/>
+								<center><label for="name">Name</label></center>
+								<center><input type="text" style="width:80%;" class="form-control"/></center>
+								<br/>
+								<center><label for="contact_no">Contact Number:</label></center>
+								<center><input type="tel" style="width:80%;" class="form-control" maxlength="10"/></center>
+								<br/>
+								<br/>
+								<br/>
+								<br/>
+								<center><input type="submit" style="width:80%; background-color:#4A4D4E; color:white; font-size:18px; padding:5px 0px; height:40px; margin-top:0px;" class="form-control" maxlength="10" value="SUBMIT NOW"/></center>
+							</form>
+							
+						</div>
+						<div style="width:15%; height:100%; float:left;">
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<script>
+				function highlight(x,y)
+				{
+					window.location.href= '../company_signup2/?plan='+y;
+					x.style.border= '1px solid red';
+				}
+			</script>
